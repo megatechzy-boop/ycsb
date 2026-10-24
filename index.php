@@ -100,10 +100,24 @@ require __DIR__ . '/includes/header.php';
 <!-- Hero -->
 <section class="hero">
     <div class="container hero-grid">
-        <figure class="hero-statue">
-            <img src="/assets/images/statue-hero.webp" alt="स्व. यशवंतराव चव्हाण यांचा १५ फूट पूर्णाकृती पुतळा, स्मृती भवन निगडी" width="206" height="216" fetchpriority="high">
-            <figcaption class="statue-badge"><strong>१५ फूट</strong><span>भारतातील सर्वांत उंच पुतळा</span></figcaption>
-        </figure>
+        <div class="statue-stage" aria-label="स्व. यशवंतराव चव्हाण यांचा १५ फूट पूर्णाकृती पुतळा">
+            <div class="stage-3d">
+                <div class="halo" aria-hidden="true"></div>
+                <div class="measure" aria-hidden="true">
+                    <span style="--h:100%">१५ फूट</span>
+                    <span style="--h:66.6%">१०</span>
+                    <span style="--h:33.3%">५</span>
+                    <span style="--h:0%">०</span>
+                </div>
+                <img class="statue-3d" src="/assets/images/statue-3d.webp" alt="स्व. यशवंतराव चव्हाण यांचा १५ फूट उंच पूर्णाकृती ब्राँझ पुतळा, स्मृती भवन निगडी" width="483" height="1030" fetchpriority="high">
+                <div class="pedestal" aria-hidden="true">
+                    <div class="pedestal-top"></div>
+                    <div class="pedestal-front">स्व. यशवंतराव चव्हाण<small>१९१३ - १९८४</small></div>
+                </div>
+                <div class="floor-shadow" aria-hidden="true"></div>
+                <div class="statue-badge"><strong>१५ फूट</strong><span>भारतातील सर्वांत उंच पुतळा</span></div>
+            </div>
+        </div>
         <div class="hero-text">
             <p class="eyebrow">महाराष्ट्राचे शिल्पकार · संयुक्त महाराष्ट्राचे पहिले मुख्यमंत्री</p>
             <h1>स्व. यशवंतराव चव्हाण <span>स्मृती भवन</span></h1>

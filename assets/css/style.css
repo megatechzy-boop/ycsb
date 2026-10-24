@@ -104,17 +104,55 @@ p { margin: 0 0 1em; }
 .hero h1 span { display: block; color: var(--brown); }
 .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 520px; }
 
-.hero-statue { position: relative; margin: 0 auto; width: min(100%, 440px); }
-.hero-statue img {
-    width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%;
-    border-radius: 220px 220px var(--radius) var(--radius);
-    border: 6px solid var(--white); outline: 3px solid var(--gold); outline-offset: 6px;
-    box-shadow: 0 24px 50px rgba(91, 30, 30, .3);
+/* 3D statue stage: layers sit at different depths and tilt with the pointer */
+.statue-stage { perspective: 1100px; display: grid; place-items: center; padding-block: 10px 30px; }
+.stage-3d {
+    --rx: 0deg; --ry: 0deg;
+    position: relative; width: min(100%, 420px); height: 600px;
+    transform-style: preserve-3d; transform: rotateX(var(--rx)) rotateY(var(--ry));
+    transition: transform .25s ease-out;
 }
+.halo {
+    position: absolute; left: 50%; top: 4%; width: 380px; aspect-ratio: 1; translate: -50% 0;
+    border-radius: 50%; transform: translateZ(-80px);
+    background: radial-gradient(circle, rgba(201, 162, 39, .55) 0%, rgba(201, 162, 39, .18) 45%, transparent 70%);
+}
+.halo::before, .halo::after { content: ""; position: absolute; inset: 8%; border-radius: 50%; border: 2px dashed rgba(139, 30, 45, .35); animation: spin 60s linear infinite; }
+.halo::after { inset: 20%; border: 1px solid rgba(201, 162, 39, .7); animation-direction: reverse; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.statue-3d {
+    position: absolute; left: 50%; bottom: 96px; height: 470px; width: auto; max-width: none; translate: -50% 0;
+    transform: translateZ(40px);
+    filter: drop-shadow(18px 22px 18px rgba(60, 10, 18, .45)) drop-shadow(-2px -2px 0 rgba(255, 230, 190, .35)) contrast(1.08) saturate(1.1);
+    animation: rise 1.2s cubic-bezier(.2, .8, .2, 1) both;
+}
+@keyframes rise { from { transform: translateZ(40px) translateY(24px) scale(.97); } }
+
+.measure {
+    position: absolute; left: 6%; bottom: 96px; height: 470px; width: 2px; transform: translateZ(10px);
+    background: repeating-linear-gradient(to top, var(--maroon) 0 2px, transparent 2px 6.6667%), var(--gold);
+    background-size: 14px 100%, 2px 100%; background-repeat: no-repeat; background-position: left 0 bottom 0, 0 0;
+}
+.measure span { position: absolute; bottom: var(--h); left: 12px; translate: 0 50%; white-space: nowrap; font-size: .85rem; font-weight: 600; color: var(--brown); }
+.measure span::before { content: ""; position: absolute; left: -14px; top: 50%; width: 10px; height: 2px; background: var(--maroon); }
+.measure span:first-child { font-family: var(--font-head); font-size: 1.05rem; color: var(--maroon); }
+
+.pedestal { position: absolute; left: 50%; bottom: 20px; width: 290px; translate: -50% 0; transform: translateZ(30px); }
+.pedestal-top { height: 26px; margin-inline: 14px; background: linear-gradient(#a8826e, #6b4637); clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%); }
+.pedestal-front {
+    height: 64px; display: grid; place-content: center; text-align: center;
+    background: linear-gradient(180deg, #4a1a1f, #2a0d12); color: var(--gold);
+    font-family: var(--font-head); font-size: 1.05rem; line-height: 1.2;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, .12), 0 18px 30px rgba(42, 13, 18, .35);
+}
+.pedestal-front small { font-family: var(--font-body); font-size: .75rem; color: #e8cfa0; letter-spacing: .08em; }
+.floor-shadow { position: absolute; left: 50%; bottom: 4px; width: 360px; height: 30px; translate: -50% 0; border-radius: 50%; background: radial-gradient(rgba(60, 10, 18, .35), transparent 70%); transform: translateZ(-20px); }
+
 .statue-badge {
-    position: absolute; left: -18px; bottom: 28px; display: flex; flex-direction: column;
+    position: absolute; right: -70px; top: 46%; display: flex; flex-direction: column; transform: translateZ(90px);
     background: var(--maroon); color: var(--white); padding: 12px 20px; border-radius: 12px;
-    box-shadow: var(--shadow); border-left: 5px solid var(--gold);
+    box-shadow: 0 14px 30px rgba(91, 30, 30, .35); border-left: 5px solid var(--gold);
 }
 .statue-badge strong { font-family: var(--font-head); font-weight: 400; font-size: 2.2rem; line-height: 1.1; color: var(--gold); }
 .statue-badge span { font-size: .95rem; }
@@ -281,8 +319,15 @@ address { font-style: normal; margin-bottom: 16px; }
     .hero-text { text-align: center; }
     .hero-text .btn-row, .visit-grid .btn-row { justify-content: center; }
     .hero-sub { margin-inline: auto; }
-    .hero-statue { width: min(100% - 24px, 340px); }
-    .statue-badge { left: -8px; }
+    .stage-3d { height: 480px; width: min(100%, 340px); }
+    .halo { width: 300px; }
+    .statue-3d { height: 370px; bottom: 88px; }
+    .measure { height: 370px; bottom: 88px; left: 2%; }
+    .pedestal { width: 240px; }
+    .floor-shadow { width: 290px; }
+    .statue-badge { top: auto; bottom: 150px; right: -6px; padding: 8px 14px; }
+    .statue-badge strong { font-size: 1.7rem; }
+    .statue-badge span { font-size: .8rem; }
     .visit-grid { text-align: center; }
     .about-img::before { display: none; }
 

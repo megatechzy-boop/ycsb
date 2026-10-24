@@ -69,6 +69,23 @@
         document.querySelectorAll('.facts').forEach((el) => factsIo.observe(el));
     }
 
+    // 3D tilt of the hero statue following the pointer
+    const stage = document.querySelector('.stage-3d');
+    const hero = document.querySelector('.hero');
+    if (stage && hero && !reduceMotion && window.matchMedia('(hover: hover)').matches) {
+        hero.addEventListener('pointermove', (e) => {
+            const r = hero.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            stage.style.setProperty('--ry', (x * 16).toFixed(2) + 'deg');
+            stage.style.setProperty('--rx', (-y * 8).toFixed(2) + 'deg');
+        });
+        hero.addEventListener('pointerleave', () => {
+            stage.style.setProperty('--ry', '0deg');
+            stage.style.setProperty('--rx', '0deg');
+        });
+    }
+
     // Gallery lightbox
     const lightbox = document.querySelector('.lightbox');
     const lbImg = lightbox?.querySelector('img');
