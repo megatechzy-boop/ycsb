@@ -24,9 +24,25 @@ $orgSchema = [
     'sameAs' => [MAP_URL, HALL_BOOKING_URL],
 ];
 
+$graph = array_merge([$orgSchema], $page['schema'] ?? []);
+
+// Inner pages pass ['label' => '/path', ...] after Home
+if (!empty($page['breadcrumb'])) {
+    $crumbs = array_merge(['मुखपृष्ठ' => '/'], $page['breadcrumb']);
+    $graph[] = [
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => array_map(fn($label, $path, $i) => [
+            '@type' => 'ListItem',
+            'position' => $i + 1,
+            'name' => $label,
+            'item' => SITE_URL . $path,
+        ], array_keys($crumbs), $crumbs, array_keys(array_keys($crumbs))),
+    ];
+}
+
 $schema = [
     '@context' => 'https://schema.org',
-    '@graph' => array_merge([$orgSchema], $page['schema'] ?? []),
+    '@graph' => $graph,
 ];
 
 $menu = [
