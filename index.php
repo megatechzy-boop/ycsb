@@ -188,7 +188,7 @@ require __DIR__ . '/includes/header.php';
 <section class="statue-band">
     <div class="container statue-grid">
         <div class="statue-img">
-            <img src="/assets/images/statue.webp" alt="स्व. यशवंतराव चव्हाण यांचा १५ फूट पूर्णाकृती पुतळा, निगडी" loading="lazy">
+            <img src="/assets/images/statue-3d.webp" alt="स्व. यशवंतराव चव्हाण यांचा १५ फूट पूर्णाकृती ब्राँझ पुतळा, निगडी" width="483" height="1030" loading="lazy">
         </div>
         <div>
             <p class="eyebrow eyebrow-gold">भारतात सर्वांत उंच</p>

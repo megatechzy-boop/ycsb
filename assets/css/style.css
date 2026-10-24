@@ -190,7 +190,8 @@ p { margin: 0 0 1em; }
 .statue-band { background: radial-gradient(circle at 25% 50%, #8B1E2D 0%, #4a0e16 70%); color: #f3e6e0; padding: clamp(56px, 8vw, 96px) 0; }
 .statue-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: center; }
 .statue-band h2 { color: var(--white); }
-.statue-img img { border-radius: var(--radius); border: 4px solid var(--gold); box-shadow: 0 0 60px rgba(201, 162, 39, .35); margin-inline: auto; max-height: 460px; object-fit: cover; }
+.statue-img { display: grid; place-items: center; padding-block: 20px; background: radial-gradient(circle at 50% 40%, rgba(201, 162, 39, .45) 0%, rgba(201, 162, 39, .12) 40%, transparent 65%); }
+.statue-img img { height: 440px; width: auto; filter: drop-shadow(0 20px 24px rgba(0, 0, 0, .5)) drop-shadow(0 0 1px rgba(255, 220, 160, .6)); }
 
 /* Timeline */
 .timeline { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
