@@ -1,4 +1,4 @@
 <?php
 // Copy to config.local.php on the server and fill in the real values.
-define('SITE_URL', 'https://www.your-domain.com');
-define('EMAIL', 'office@your-domain.com');
+// SITE_URL already defaults to https://ycbhavan.org
+define('EMAIL', 'office@ycbhavan.org');

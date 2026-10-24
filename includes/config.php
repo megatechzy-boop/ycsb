@@ -7,8 +7,9 @@ if (is_file(__DIR__ . '/config.local.php')) {
 }
 // Without an override, use the domain the site is served from
 if (!defined('SITE_URL')) {
-    $host = preg_replace('/[^a-z0-9.:-]/i', '', $_SERVER['HTTP_HOST'] ?? 'www.example.com');
-    define('SITE_URL', 'https://' . $host);
+    // Live domain; local test servers keep their own address
+    $host = preg_replace('/[^a-z0-9.:-]/i', '', $_SERVER['HTTP_HOST'] ?? 'ycbhavan.org');
+    define('SITE_URL', 'https://' . (preg_match('/^(localhost|127\.0\.0\.1)(:\d+)?$/', $host) ? $host : 'ycbhavan.org'));
 }
 define('SITE_NAME_MR', 'स्व. यशवंतराव चव्हाण स्मृती भवन');
 define('SITE_NAME_EN', 'Late Yashwantrao Chavan Smruti Bhavan');
