@@ -23,6 +23,7 @@ $page = [
     'title' => 'नियम व अटी | ' . SITE_NAME_MR,
     'description' => 'स्व. यशवंतराव चव्हाण स्मृती भवन वेबसाइट व सुविधा वापराचे नियम व अटी.',
     'path' => '/terms',
+    'alternates' => ['mr' => '/terms', 'en' => '/en/terms'],
     'breadcrumb' => ['नियम व अटी' => '/terms'],
 ];
 $hero = ['eyebrow' => 'धोरण', 'title' => 'नियम व अटी', 'subtitle' => 'वेबसाइट व सुविधा वापराबाबत.'];

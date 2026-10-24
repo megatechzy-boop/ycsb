@@ -1,14 +1,7 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../includes/data.php';
 
-$facilitiesEn = [
-    ['statue-3d', '15 ft Statue of Yashwantrao Chavan', 'His tallest statue in India, at the entrance of the Smruti Bhavan.'],
-    ['library-board', 'UPSC & MPSC Study Library', 'Late Arun Kirloskar study room with individual desks for competitive exam aspirants.'],
-    ['history-library', 'History Library', 'Late Shrimant Chh. Abhaysinhraje Bhosale library on Maharashtra and Maratha history.'],
-    ['guidance', 'Student Guidance Centre', 'Late Hirabai Kisanrao Landge centre for academic and career guidance.'],
-    ['jeevanpat', 'Life-Story Gallery', 'The complete life of Yashwantrao Chavan in pictures – the only such gallery in Maharashtra.'],
-    ['vadhu-var', 'Matrimonial Centre', 'Paschim Maharashtra Vadhu-Var Suchak Kendra, open to all communities.'],
-];
 
 $faqsEn = [
     ['Where is the Yashwantrao Chavan Smruti Bhavan?', 'It is at ' . ADDRESS_STREET . ', Pimpri-Chinchwad, Pune ' . ADDRESS_PIN . ', next to Sant Tukaram Udyan.'],
@@ -69,7 +62,7 @@ require __DIR__ . '/../includes/header.php';
             <h2>A memorial to Yashwantrao Chavan's vision</h2>
             <p>Yashwantrao Chavan (1913–1984) was a freedom fighter, the first Chief Minister of Maharashtra and later Deputy Prime Minister of India. His cooperative and industrial policies created sugar factories, banks and industries across the state.</p>
             <p>To pass on his inspiration to young people, <strong>Yashwantrao Chavan Smarak Samiti, Pimpri-Chinchwad</strong> – a public trust founded in 1989 – built this 1.5 lakh sq ft Smruti Bhavan on 44 gunthe of land at Pradhikaran, Nigdi.</p>
-            <a href="/about-yashwantrao-chavan" class="btn btn-outline" lang="mr">Read more (Marathi)</a>
+            <a href="/en/about-yashwantrao-chavan" class="btn btn-outline">About Yashwantrao Chavan</a>
         </div>
     </div>
 </section>
@@ -80,15 +73,16 @@ require __DIR__ . '/../includes/header.php';
             <p class="eyebrow">Facilities</p>
             <h2>What you'll find at the Smruti Bhavan</h2>
         </div>
-        <div class="card-grid card-grid-3">
-            <?php foreach ($facilitiesEn as [$img, $title, $text]): ?>
-                <div class="card">
+        <div class="card-grid">
+            <?php foreach (array_slice($facilitiesEn, 0, 7) as [$img, $title, $text, $link]): ?>
+                <a class="card" href="<?= e($link) ?>">
                     <div class="card-img<?= $img === 'statue-3d' ? ' card-img-cutout' : '' ?>"><img src="/assets/images/<?= $img ?>.webp" alt="<?= e($title) ?>" loading="lazy"></div>
                     <div class="card-body">
                         <h3><?= e($title) ?></h3>
                         <p><?= e($text) ?></p>
+                        <span class="card-link">Learn more →</span>
                     </div>
-                </div>
+                </a>
             <?php endforeach; ?>
         </div>
     </div>
@@ -109,7 +103,7 @@ require __DIR__ . '/../includes/header.php';
                 </div>
             <?php endforeach; ?>
         </div>
-        <div class="center"><a href="<?= HALL_BOOKING_URL ?>" class="btn btn-primary" target="_blank" rel="noopener">Book now – venutaihall.com ↗</a></div>
+        <div class="center btn-row" style="justify-content:center"><a href="/en/halls" class="btn btn-outline">Hall details</a><a href="<?= HALL_BOOKING_URL ?>" class="btn btn-primary" target="_blank" rel="noopener">Book now – venutaihall.com ↗</a></div>
     </div>
 </section>
 
@@ -120,7 +114,7 @@ require __DIR__ . '/../includes/header.php';
             <p class="eyebrow">For students</p>
             <h2>Study, stay and guidance under one roof</h2>
             <p>The student hostel has 52 rooms for 144 male and female students, with a UPSC/MPSC study library, a history library and a guidance centre in the same building.</p>
-            <a href="#contact" class="btn btn-primary">Enquire about admission</a>
+            <a href="/en/student-hostel" class="btn btn-primary">Student hostel</a>
         </div>
     </div>
 </section>

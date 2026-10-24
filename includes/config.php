@@ -31,6 +31,40 @@ function mr_num($value)
     return strtr((string) $value, ['0' => '०', '1' => '१', '2' => '२', '3' => '३', '4' => '४', '5' => '५', '6' => '६', '7' => '७', '8' => '८', '9' => '९']);
 }
 
+// Language of the current page ($page['lang'], default Marathi)
+function is_en()
+{
+    return ($GLOBALS['page']['lang'] ?? 'mr') === 'en';
+}
+
+// Pick the Marathi or English string for the current page
+function t($mr, $en)
+{
+    return is_en() ? $en : $mr;
+}
+
+// Phone numbers and figures: Marathi digits on Marathi pages
+function num($value)
+{
+    return is_en() ? (string) $value : mr_num($value);
+}
+
+// Contact persons from the brochure, in the page's language
+function contact_people()
+{
+    return [
+        [t('श्री. सुनिल जाधव', 'Mr. Sunil Jadhav'), PHONE_1],
+        [t('श्री. रामभाऊ तावरे', 'Mr. Rambhau Taware'), PHONE_2],
+        [t('श्री. विलास भोसले', 'Mr. Vilas Bhosale'), PHONE_3],
+    ];
+}
+
+// Home URL for the current language
+function home_url()
+{
+    return is_en() ? '/en/' : '/';
+}
+
 function e($text)
 {
     return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');

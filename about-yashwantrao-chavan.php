@@ -54,6 +54,7 @@ $page = [
     'title' => 'यशवंतराव चव्हाण माहिती - महाराष्ट्राचे शिल्पकार | जीवनपट व कार्य',
     'description' => 'यशवंतराव चव्हाण (१९१३-१९८४) - संयुक्त महाराष्ट्राचे पहिले मुख्यमंत्री, भारताचे उपपंतप्रधान. जन्म, स्वातंत्र्य लढा, सहकार, पंचायत राज व महाराष्ट्राच्या जडणघडणीतील कार्य.',
     'path' => '/about-yashwantrao-chavan',
+    'alternates' => ['mr' => '/about-yashwantrao-chavan', 'en' => '/en/about-yashwantrao-chavan'],
     'active' => 'about',
     'breadcrumb' => ['आमच्याबद्दल' => '/about-samiti', 'स्व. यशवंतराव चव्हाण' => '/about-yashwantrao-chavan'],
     'schema' => [

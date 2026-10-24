@@ -6,15 +6,15 @@ require __DIR__ . '/page-hero.php';
 
 <section class="section">
     <div class="container narrow legal">
-        <p class="note legal-updated">शेवटचा बदल: <?= e($updated) ?></p>
+        <p class="note legal-updated"><?= t('शेवटचा बदल', 'Last updated') ?>: <?= e($updated) ?></p>
         <?php foreach ($sections as $heading => $paras): ?>
             <h2><?= e($heading) ?></h2>
             <?php foreach ($paras as $para): ?>
                 <p><?= e($para) ?></p>
             <?php endforeach; ?>
         <?php endforeach; ?>
-        <h2>संपर्क</h2>
-        <p><?= e(ORG_NAME_MR) ?>, <?= e(ADDRESS_MR) ?>. फोन: <a href="tel:+91<?= PHONE_1 ?>"><?= mr_num(PHONE_1) ?></a></p>
+        <h2><?= t('संपर्क', 'Contact') ?></h2>
+        <p><?= e(t(ORG_NAME_MR, ORG_NAME_EN)) ?>, <?= e(t(ADDRESS_MR, ADDRESS_STREET . ', ' . ADDRESS_CITY . ' ' . ADDRESS_PIN)) ?>. <?= t('फोन', 'Phone') ?>: <a href="tel:+91<?= PHONE_1 ?>"><?= num(PHONE_1) ?></a></p>
     </div>
 </section>
 

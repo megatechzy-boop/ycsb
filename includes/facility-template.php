@@ -6,9 +6,13 @@
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/data.php';
 
-$path = '/facilities/' . $f['slug'];
-if (!empty($f['path'])) {
-    $path = $f['path'];
+// English pages live under /en with the same path as the Marathi page
+$isEnPage = ($f['lang'] ?? 'mr') === 'en';
+$prefix = $isEnPage ? '/en' : '';
+$mrPath = $f['path'] ?? '/facilities/' . $f['slug'];
+$path = $prefix . $mrPath;
+if ($isEnPage) {
+    $facilities = $facilitiesEn;
 }
 
 $schema = [[
@@ -31,11 +35,13 @@ if (!empty($f['faqs'])) {
 }
 
 $page = [
+    'lang' => $isEnPage ? 'en' : 'mr',
+    'alternates' => ['mr' => $mrPath, 'en' => '/en' . $mrPath],
     'title' => $f['title'],
     'description' => $f['description'],
     'path' => $path,
     'active' => $f['active'] ?? 'facilities',
-    'breadcrumb' => $f['breadcrumb'] ?? ['सोयी-सुविधा' => '/#facilities', $f['h1'] => $path],
+    'breadcrumb' => $f['breadcrumb'] ?? [($isEnPage ? 'Facilities' : 'सोयी-सुविधा') => $prefix . '/#facilities', $f['h1'] => $path],
     'schema' => $schema,
 ];
 
@@ -50,7 +56,7 @@ $formInterest = $f['interest'] ?? 'other';
 
 // Other facilities, excluding this one and external links
 // Other facilities: the next three after this one, wrapping around
-$internal = array_values(array_filter($facilities, fn($x) => str_starts_with($x[3], '/') && $x[3] !== '/smruti-bhavan-project'));
+$internal = array_values(array_filter($facilities, fn($x) => str_starts_with($x[3], '/') && !str_ends_with($x[3], '/smruti-bhavan-project')));
 $self = array_search($path, array_column($internal, 3), true);
 $related = [];
 for ($i = 1; count($related) < 3 && $i < count($internal); $i++) {
@@ -66,14 +72,14 @@ require __DIR__ . '/page-hero.php';
     <div class="container bio-grid">
         <div>
             <figure class="facility-figure<?= !empty($f['cutout']) ? ' facility-figure-cutout' : '' ?>">
-                <img src="/assets/images/<?= e($f['image']) ?>.webp" alt="<?= e($f['h1']) ?> - स्मृती भवन, निगडी">
+                <img src="/assets/images/<?= e($f['image']) ?>.webp" alt="<?= e($f['h1']) ?> - <?= t('स्मृती भवन, निगडी', 'Smruti Bhavan, Nigdi') ?>">
             </figure>
             <?php foreach ($f['intro'] as $i => $para): ?>
                 <p<?= $i === 0 ? ' class="lead"' : '' ?>><?= e($para) ?></p>
             <?php endforeach; ?>
         </div>
-        <aside class="fact-box" aria-label="<?= e($f['h1']) ?> - थोडक्यात माहिती">
-            <h2>थोडक्यात माहिती</h2>
+        <aside class="fact-box" aria-label="<?= e($f['h1']) ?> - <?= t('थोडक्यात माहिती', 'Quick facts') ?>">
+            <h2><?= t('थोडक्यात माहिती', 'Quick facts') ?></h2>
             <dl>
                 <?php foreach ($f['info'] as $label => $value): ?>
                     <div><dt><?= e($label) ?></dt><dd><?= e($value) ?></dd></div>
@@ -81,10 +87,10 @@ require __DIR__ . '/page-hero.php';
             </dl>
             <div class="fact-box-cta">
                 <?php if (!empty($f['bookingUrl'])): ?>
-                    <a href="<?= e($f['bookingUrl']) ?>" class="btn btn-gold btn-sm fact-box-book" target="_blank" rel="noopener">ऑनलाइन बुकिंग - venutaihall.com ↗</a>
+                    <a href="<?= e($f['bookingUrl']) ?>" class="btn btn-gold btn-sm fact-box-book" target="_blank" rel="noopener"><?= t('ऑनलाइन बुकिंग', 'Book online') ?> - venutaihall.com ↗</a>
                 <?php endif; ?>
-                <a href="#contact" class="btn btn-primary btn-sm">चौकशी करा</a>
-                <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-outline btn-sm"><?= icon('phone') ?> कॉल करा</a>
+                <a href="#contact" class="btn btn-primary btn-sm"><?= t('चौकशी करा', 'Enquire') ?></a>
+                <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-outline btn-sm"><?= icon('phone') ?> <?= t('कॉल करा', 'Call') ?></a>
             </div>
         </aside>
     </div>
@@ -95,8 +101,8 @@ require __DIR__ . '/page-hero.php';
 <section class="section section-alt">
     <div class="container">
         <div class="section-head">
-            <p class="eyebrow">वैशिष्ट्ये</p>
-            <h2>येथे काय मिळते?</h2>
+            <p class="eyebrow"><?= t('वैशिष्ट्ये', 'Features') ?></p>
+            <h2><?= t('येथे काय मिळते?', 'What you get') ?></h2>
         </div>
         <ul class="check-grid">
             <?php foreach ($f['features'] as $feature): ?>
@@ -112,8 +118,8 @@ require __DIR__ . '/page-hero.php';
 <section class="section">
     <div class="container">
         <div class="section-head">
-            <p class="eyebrow">फोटो</p>
-            <h2>झलक</h2>
+            <p class="eyebrow"><?= t('फोटो', 'Photos') ?></p>
+            <h2><?= t('झलक', 'A glimpse') ?></h2>
         </div>
         <div class="photo-row">
             <?php foreach ($f['photos'] as [$img, $caption]): ?>
@@ -131,8 +137,8 @@ require __DIR__ . '/page-hero.php';
 <section class="section section-alt">
     <div class="container narrow">
         <div class="section-head">
-            <p class="eyebrow">प्रश्नोत्तरे</p>
-            <h2>वारंवार विचारले जाणारे प्रश्न</h2>
+            <p class="eyebrow"><?= t('प्रश्नोत्तरे', 'FAQ') ?></p>
+            <h2><?= t('वारंवार विचारले जाणारे प्रश्न', 'Frequently asked questions') ?></h2>
         </div>
         <div class="faq">
             <?php foreach ($f['faqs'] as $i => [$q, $a]): ?>
@@ -150,15 +156,15 @@ require __DIR__ . '/page-hero.php';
 <section class="section" id="contact">
     <div class="container contact-grid">
         <div>
-            <p class="eyebrow">संपर्क</p>
-            <h2>अधिक माहितीसाठी संपर्क करा</h2>
-            <p>वेळा, शुल्क व प्रवेश प्रक्रियेबद्दल माहितीसाठी फॉर्म भरा किंवा थेट फोन करा.</p>
+            <p class="eyebrow"><?= t('संपर्क', 'Contact') ?></p>
+            <h2><?= t('अधिक माहितीसाठी संपर्क करा', 'Contact us for details') ?></h2>
+            <p><?= t('वेळा, शुल्क व प्रवेश प्रक्रियेबद्दल माहितीसाठी फॉर्म भरा किंवा थेट फोन करा.', 'For timings, fees and admission details, fill in the form or call us directly.') ?></p>
             <ul class="contact-list">
-                <li>श्री. सुनिल जाधव - <a href="tel:+91<?= PHONE_1 ?>"><?= mr_num(PHONE_1) ?></a></li>
-                <li>श्री. रामभाऊ तावरे - <a href="tel:+91<?= PHONE_2 ?>"><?= mr_num(PHONE_2) ?></a></li>
-                <li>श्री. विलास भोसले - <a href="tel:+91<?= PHONE_3 ?>"><?= mr_num(PHONE_3) ?></a></li>
+                <?php foreach (contact_people() as [$name, $phone]): ?>
+                    <li><?= e($name) ?> - <a href="tel:+91<?= $phone ?>"><?= num($phone) ?></a></li>
+                <?php endforeach; ?>
             </ul>
-            <address><?= e(ADDRESS_MR) ?></address>
+            <address><?= e(t(ADDRESS_MR, ADDRESS_STREET . ', ' . ADDRESS_CITY . ' ' . ADDRESS_PIN)) ?></address>
         </div>
         <?php require __DIR__ . '/inquiry-form.php'; ?>
     </div>
@@ -168,8 +174,8 @@ require __DIR__ . '/page-hero.php';
 <section class="section section-alt">
     <div class="container">
         <div class="section-head">
-            <p class="eyebrow">इतर सुविधा</p>
-            <h2>स्मृती भवनमध्ये आणखी काय आहे?</h2>
+            <p class="eyebrow"><?= t('इतर सुविधा', 'More facilities') ?></p>
+            <h2><?= t('स्मृती भवनमध्ये आणखी काय आहे?', 'More at the Smruti Bhavan') ?></h2>
         </div>
         <div class="card-grid card-grid-3">
             <?php foreach ($related as [$img, $title, $text, $link]): ?>
@@ -178,7 +184,7 @@ require __DIR__ . '/page-hero.php';
                     <div class="card-body">
                         <h3><?= e($title) ?></h3>
                         <p><?= e($text) ?></p>
-                        <span class="card-link">अधिक माहिती →</span>
+                        <span class="card-link"><?= t('अधिक माहिती', 'Learn more') ?> →</span>
                     </div>
                 </a>
             <?php endforeach; ?>

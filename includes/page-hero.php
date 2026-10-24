@@ -4,7 +4,7 @@
 <section class="page-hero"<?= !empty($hero['image']) ? ' style="--hero-img: url(\'/assets/images/' . e($hero['image']) . '.webp\')"' : '' ?>>
     <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="/">मुखपृष्ठ</a>
+            <a href="<?= home_url() ?>"><?= t('मुखपृष्ठ', 'Home') ?></a>
             <?php foreach ($page['breadcrumb'] as $label => $path): ?>
                 <span aria-hidden="true">/</span>
                 <?php if ($path === $page['path']): ?>

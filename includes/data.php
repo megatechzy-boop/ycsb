@@ -29,3 +29,33 @@ $timeline = [
     ['२०१४', 'बांधकामास सुरुवात', 'भव्य स्मृती भवनाच्या बांधकामाची सुरुवात झाली.'],
     ['२०२६', 'बांधकाम पूर्ण', 'सप्टेंबर २०२६ मध्ये १.५ लाख चौ. फूट बांधकाम पूर्ण.'],
 ];
+
+// English versions (pages under /en)
+$facilitiesEn = [
+    ['statue-3d', '15 ft Statue of Yashwantrao Chavan', 'His tallest statue in India.', '/en/facilities/statue'],
+    ['library-board', 'UPSC & MPSC Study Library', 'Late Arun Kirloskar study room for competitive exam aspirants.', '/en/facilities/upsc-mpsc-library'],
+    ['history-library', 'History Library', 'Late Shrimant Chh. Abhaysinhraje Bhosale history library.', '/en/facilities/history-library'],
+    ['guidance', 'Student Guidance Centre', 'Late Hirabai Kisanrao Landge centre for academic and all-round growth.', '/en/facilities/student-guidance-centre'],
+    ['hostel', 'Student Hostel', '52 rooms for 144 male and female students.', '/en/student-hostel'],
+    ['jeevanpat', 'Life-Story Gallery', 'His complete life in pictures – the only such gallery in Maharashtra.', '/en/facilities/jeevanpat-gallery'],
+    ['vadhu-var', 'Matrimonial Centre', 'Paschim Maharashtra Vadhu-Var Suchak Kendra, open to all communities.', '/en/facilities/vadhu-var-suchak-kendra'],
+    ['venutai-hall', 'Late Venutai Chavan Multipurpose Hall', 'Air-conditioned halls seating 1,200 and 350.', '/en/halls'],
+    ['guest-room', 'Guest Rooms', '8 air-conditioned rooms.', '/en/halls'],
+    ['jagtap-bust', 'Bust of Late Laxmanbhau Jagtap, MLA', 'In memory of his key role in building the Smruti Bhavan.', '/en/smruti-bhavan-project'],
+];
+
+$partnersEn = [
+    'Pune District Mitra Mandal',
+    'Satara District Mitra Mandal',
+    'Kolhapur District Mitra Mandal',
+    'Sangli District Mitra Mandal',
+    'Solapur District Mitra Mandal',
+    'Paschim Maharashtra Yuva Manch',
+];
+
+$timelineEn = [
+    ['1989', 'Samiti founded', 'Admirers of Yashwantrao Chavan registered the Samiti under the Bombay Public Trusts Act, 1950.'],
+    ['1991', 'Land acquired', '44 gunthe of land acquired at Pradhikaran, Nigdi for the memorial.'],
+    ['2014', 'Construction begins', 'Work on the Smruti Bhavan building starts.'],
+    ['2026', 'Construction complete', '1.5 lakh sq ft of construction completed in September 2026.'],
+];

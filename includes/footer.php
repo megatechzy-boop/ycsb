@@ -16,26 +16,29 @@
         <div>
             <h4>Explore</h4>
             <ul>
-                <li><a href="/en/#about">About</a></li>
-                <li><a href="/en/#facilities">Facilities</a></li>
-                <li><a href="/en/#halls">Halls</a></li>
-                <li><a href="/en/#contact">Contact</a></li>
+                <li><a href="/en/about-samiti">Smarak Samiti</a></li>
+                <li><a href="/en/about-yashwantrao-chavan">Yashwantrao Chavan</a></li>
+                <li><a href="/en/smruti-bhavan-project">Smruti Bhavan Project</a></li>
+                <li><a href="/en/gallery">Gallery</a></li>
+                <li><a href="/en/news-events">News &amp; Events</a></li>
             </ul>
         </div>
         <div>
-            <h4>In Marathi</h4>
+            <h4>Facilities</h4>
             <ul>
-                <li><a href="/" lang="mr">मुखपृष्ठ</a></li>
-                <li><a href="/about-yashwantrao-chavan" lang="mr">स्व. यशवंतराव चव्हाण</a></li>
-                <li><a href="/gallery" lang="mr">गॅलरी</a></li>
-                <li><a href="/faq" lang="mr">प्रश्नोत्तरे</a></li>
+                <li><a href="/en/facilities/upsc-mpsc-library">UPSC &amp; MPSC Library</a></li>
+                <li><a href="/en/student-hostel">Student Hostel</a></li>
+                <li><a href="/en/facilities/vadhu-var-suchak-kendra">Matrimonial Centre</a></li>
+                <li><a href="/en/halls">Halls &amp; Booking</a></li>
             </ul>
         </div>
         <div>
-            <h4>Booking</h4>
+            <h4>Information</h4>
             <ul>
-                <li><a href="<?= HALL_BOOKING_URL ?>" target="_blank" rel="noopener">venutaihall.com ↗</a></li>
-                <li><a href="<?= MAP_URL ?>" target="_blank" rel="noopener">Google Maps ↗</a></li>
+                <li><a href="/en/faq">FAQ</a></li>
+                <li><a href="/en/contact">Contact</a></li>
+                <li><a href="/en/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/en/terms">Terms</a></li>
             </ul>
         </div>
     </div>
@@ -93,14 +96,8 @@
     </div>
 </footer>
 
-<div class="mobile-bar" aria-label="त्वरित संपर्क">
-    <a href="tel:+91<?= PHONE_1 ?>"><?= icon('phone') ?><span><?= !empty($isEn) ? 'Call' : 'कॉल' ?></span></a>
-    <a href="https://wa.me/<?= WHATSAPP ?>" target="_blank" rel="noopener"><?= icon('whatsapp') ?><span>WhatsApp</span></a>
-    <a href="<?= MAP_URL ?>" target="_blank" rel="noopener"><?= icon('pin') ?><span><?= !empty($isEn) ? 'Directions' : 'दिशा' ?></span></a>
-</div>
-
 <div class="lightbox" hidden>
-    <button class="lightbox-close" aria-label="बंद करा">×</button>
+    <button class="lightbox-close" aria-label="<?= t('बंद करा', 'Close') ?>">×</button>
     <img src="" alt="">
 </div>
 

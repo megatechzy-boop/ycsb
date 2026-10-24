@@ -28,7 +28,7 @@ $graph = array_merge([$orgSchema], $page['schema'] ?? []);
 
 // Inner pages pass ['label' => '/path', ...] after Home
 if (!empty($page['breadcrumb'])) {
-    $crumbs = array_merge(['मुखपृष्ठ' => '/'], $page['breadcrumb']);
+    $crumbs = array_merge([t('मुखपृष्ठ', 'Home') => home_url()], $page['breadcrumb']);
     $graph[] = [
         '@type' => 'BreadcrumbList',
         'itemListElement' => array_map(fn($label, $path, $i) => [
@@ -71,14 +71,29 @@ $isEn = ($page['lang'] ?? 'mr') === 'en';
 if ($isEn) {
     $menu = [
         'home' => ['Home', '/en/'],
-        'about' => ['About', '/en/#about'],
-        'facilities' => ['Facilities', '/en/#facilities'],
-        'hall' => ['Halls', '/en/#halls'],
-        'hostel' => ['Students', '/en/#students'],
-        'contact' => ['Contact', '/en/#contact'],
+        'about' => ['About', null, [
+            ['Yashwantrao Chavan Smarak Samiti', '/en/about-samiti'],
+            ['Yashwantrao Chavan', '/en/about-yashwantrao-chavan'],
+            ['Smruti Bhavan Project', '/en/smruti-bhavan-project'],
+        ]],
+        'facilities' => ['Facilities', null, [
+            ['15 ft Statue', '/en/facilities/statue'],
+            ['UPSC & MPSC Library', '/en/facilities/upsc-mpsc-library'],
+            ['History Library', '/en/facilities/history-library'],
+            ['Student Guidance Centre', '/en/facilities/student-guidance-centre'],
+            ['Life-Story Gallery', '/en/facilities/jeevanpat-gallery'],
+            ['Matrimonial Centre', '/en/facilities/vadhu-var-suchak-kendra'],
+        ]],
+        'hostel' => ['Hostel', '/en/student-hostel'],
+        'hall' => ['Hall Booking', '/en/halls'],
+        'gallery' => ['Gallery', '/en/gallery'],
+        'contact' => ['Contact', '/en/contact'],
     ];
 }
 $siteName = $isEn ? SITE_NAME_EN : SITE_NAME_MR;
+// Language switch goes to the same page in the other language when it exists
+$switchMr = $page['alternates']['mr'] ?? '/';
+$switchEn = $page['alternates']['en'] ?? '/en/';
 $orgName = $isEn ? ORG_NAME_EN : ORG_NAME_MR;
 ?>
 <!DOCTYPE html>
@@ -129,9 +144,9 @@ $orgName = $isEn ? ORG_NAME_EN : ORG_NAME_MR;
             <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-outline btn-sm"><?= icon('phone') ?> <?= $isEn ? 'Call' : 'कॉल करा' ?></a>
             <a href="https://wa.me/<?= WHATSAPP ?>" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener"><?= icon('whatsapp') ?> WhatsApp</a>
             <?php if ($isEn): ?>
-                <a href="/" class="lang-switch" hreflang="mr" lang="mr">मराठी</a>
+                <a href="<?= e($switchMr) ?>" class="lang-switch" hreflang="mr" lang="mr">मराठी</a>
             <?php else: ?>
-                <a href="/en/" class="lang-switch" hreflang="en" lang="en">EN</a>
+                <a href="<?= e($switchEn) ?>" class="lang-switch" hreflang="en" lang="en">EN</a>
             <?php endif; ?>
         </div>
         <button class="nav-toggle" aria-label="<?= $isEn ? 'Open menu' : 'मेनू उघडा' ?>" aria-expanded="false" aria-controls="main-nav">
@@ -159,7 +174,7 @@ $orgName = $isEn ? ORG_NAME_EN : ORG_NAME_MR;
                     </li>
                 <?php endif; ?>
             <?php endforeach; ?>
-            <li class="nav-mobile-only"><?= $isEn ? '<a href="/" lang="mr">मराठी</a>' : '<a href="/en/" lang="en">English</a>' ?></li>
+            <li class="nav-mobile-only"><?= $isEn ? '<a href="' . e($switchMr) . '" lang="mr">मराठी</a>' : '<a href="' . e($switchEn) . '" lang="en">English</a>' ?></li>
         </ul>
     </nav>
 </header>

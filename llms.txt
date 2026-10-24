@@ -39,3 +39,22 @@
 - [FAQ](https://www.example.com/faq)
 - [News and events](https://www.example.com/news-events)
 - [English home page](https://www.example.com/en/)
+
+## English pages
+- https://www.example.com/en/about-samiti
+- https://www.example.com/en/about-yashwantrao-chavan
+- https://www.example.com/en/smruti-bhavan-project
+- https://www.example.com/en/student-hostel
+- https://www.example.com/en/facilities/statue
+- https://www.example.com/en/facilities/upsc-mpsc-library
+- https://www.example.com/en/facilities/history-library
+- https://www.example.com/en/facilities/student-guidance-centre
+- https://www.example.com/en/facilities/jeevanpat-gallery
+- https://www.example.com/en/facilities/vadhu-var-suchak-kendra
+- https://www.example.com/en/halls
+- https://www.example.com/en/gallery
+- https://www.example.com/en/contact
+- https://www.example.com/en/faq
+- https://www.example.com/en/news-events
+- https://www.example.com/en/privacy-policy
+- https://www.example.com/en/terms

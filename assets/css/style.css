@@ -425,7 +425,6 @@ address { font-style: normal; }
 .topic-card:hover { transform: translateY(-4px); }
 .topic-card p { flex: 1; margin-bottom: 12px; }
 
-.mobile-bar { display: none; }
 
 /* Scroll reveal */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s, transform .6s; }
@@ -493,15 +492,6 @@ address { font-style: normal; }
     .student-grid, .partner-list { grid-template-columns: 1fr 1fr; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 
-    .mobile-bar {
-        display: grid; grid-template-columns: repeat(3, 1fr); position: fixed; inset: auto 0 0; z-index: 60;
-        background: var(--maroon); box-shadow: 0 -4px 14px rgba(0, 0, 0, .2);
-    }
-    .mobile-bar a { display: flex; flex-direction: column; align-items: center; padding: 8px 0; color: var(--white); text-decoration: none; font-size: 1.2rem; line-height: 1.2; }
-    .mobile-bar span { font-size: .78rem; }
-    .mobile-bar .icon { width: 22px; height: 22px; margin-bottom: 2px; }
-    .mobile-bar .icon-whatsapp { color: #25D366; }
-    body { padding-bottom: 62px; }
 }
 
 @media (max-width: 560px) {

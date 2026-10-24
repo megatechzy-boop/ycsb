@@ -24,6 +24,7 @@ $page = [
     'title' => 'गोपनीयता धोरण | ' . SITE_NAME_MR,
     'description' => 'स्व. यशवंतराव चव्हाण स्मृती भवन वेबसाइटचे गोपनीयता धोरण - चौकशी फॉर्ममधील माहितीचा वापर व सुरक्षितता.',
     'path' => '/privacy-policy',
+    'alternates' => ['mr' => '/privacy-policy', 'en' => '/en/privacy-policy'],
     'breadcrumb' => ['गोपनीयता धोरण' => '/privacy-policy'],
 ];
 $hero = ['eyebrow' => 'धोरण', 'title' => 'गोपनीयता धोरण', 'subtitle' => 'तुमची माहिती आम्ही कशी वापरतो.'];
