@@ -29,7 +29,7 @@
                 <li><a href="/en/facilities/upsc-mpsc-library">UPSC &amp; MPSC Library</a></li>
                 <li><a href="/en/student-hostel">Student Hostel</a></li>
                 <li><a href="/en/facilities/vadhu-var-suchak-kendra">Matrimonial Centre</a></li>
-                <li><a href="/en/halls">Halls &amp; Booking</a></li>
+                <li><a href="/en/venutai-chavan-multipurpose-hall">Halls &amp; Booking</a></li>
             </ul>
         </div>
         <div>
@@ -70,7 +70,7 @@
                 <li><a href="/facilities/upsc-mpsc-library">स्पर्धा परीक्षा अभ्यासिका</a></li>
                 <li><a href="/student-hostel">विद्यार्थी वसतिगृह</a></li>
                 <li><a href="/facilities/vadhu-var-suchak-kendra">वधू-वर सूचक केंद्र</a></li>
-                <li><a href="/halls">सभागृह व हॉल बुकिंग</a></li>
+                <li><a href="/venutai-chavan-multipurpose-hall">सभागृह व हॉल बुकिंग</a></li>
             </ul>
         </div>
         <div>

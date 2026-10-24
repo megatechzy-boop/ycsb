@@ -17,6 +17,10 @@ RewriteRule ^llms\.txt$ llms.php [L]
 RewriteCond %{THE_REQUEST} \s/(sitemap|robots|llms)(\.php)?[\s?]
 RewriteRule ^ - [R=404,L]
 
+# Old hall page address -> new one (permanent)
+RewriteRule ^halls(\.php)?/?$ /venutai-chavan-multipurpose-hall [R=301,L]
+RewriteRule ^en/halls(\.php)?/?$ /en/venutai-chavan-multipurpose-hall [R=301,L]
+
 # Block direct access to includes (before any rewrite)
 RewriteRule ^includes/ - [F,L]
 

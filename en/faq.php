@@ -15,9 +15,9 @@ $groups = [
         ['Who was Yashwantrao Chavan?', 'Yashwantrao Chavan (1913–1984) was a freedom fighter, the first Chief Minister of Maharashtra and a former Deputy Prime Minister of India.', '/en/about-yashwantrao-chavan'],
     ],
     'Halls & booking' => [
-        ['What is the seating capacity of the halls?', 'The large hall seats up to 1,200 and the small hall up to 350. The dining hall serves 400 at a time.', '/en/halls'],
-        ['How do I book a hall?', 'Book online at venutaihall.com or call +91 ' . PHONE_1 . '.', '/en/halls'],
-        ['Is there accommodation for guests?', 'Yes, there are 8 air-conditioned guest rooms in the same building.', '/en/halls'],
+        ['What is the seating capacity of the halls?', 'The large hall seats up to 1,200 and the small hall up to 350. The dining hall serves 400 at a time.', '/en/venutai-chavan-multipurpose-hall'],
+        ['How do I book a hall?', 'Book online at venutaihall.com or call +91 ' . PHONE_1 . '.', '/en/venutai-chavan-multipurpose-hall'],
+        ['Is there accommodation for guests?', 'Yes, there are 8 air-conditioned guest rooms in the same building.', '/en/venutai-chavan-multipurpose-hall'],
     ],
     'For students' => [
         ['How many students can the hostel accommodate?', 'The hostel has 52 rooms for 144 male and female students.', '/en/student-hostel'],

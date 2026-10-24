@@ -86,7 +86,7 @@ $menu = [
         ['वधू-वर सूचक केंद्र', '/facilities/vadhu-var-suchak-kendra'],
     ]],
     'hostel' => ['वसतिगृह', '/student-hostel'],
-    'hall' => ['हॉल बुकिंग', '/halls'],
+    'hall' => ['हॉल बुकिंग', '/venutai-chavan-multipurpose-hall'],
     'gallery' => ['गॅलरी', '/gallery'],
     'contact' => ['संपर्क', '/contact'],
 ];
@@ -110,7 +110,7 @@ if ($isEn) {
             ['Matrimonial Centre', '/en/facilities/vadhu-var-suchak-kendra'],
         ]],
         'hostel' => ['Hostel', '/en/student-hostel'],
-        'hall' => ['Hall Booking', '/en/halls'],
+        'hall' => ['Hall Booking', '/en/venutai-chavan-multipurpose-hall'],
         'gallery' => ['Gallery', '/en/gallery'],
         'contact' => ['Contact', '/en/contact'],
     ];

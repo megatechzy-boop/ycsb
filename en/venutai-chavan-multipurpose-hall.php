@@ -4,9 +4,9 @@ require_once __DIR__ . '/../includes/config.php';
 $f = [
     'lang' => 'en',
     'slug' => 'halls',
-    'path' => '/halls',
+    'path' => '/venutai-chavan-multipurpose-hall',
     'active' => 'hall',
-    'breadcrumb' => ['Halls & Booking' => '/en/halls'],
+    'breadcrumb' => ['Halls & Booking' => '/en/venutai-chavan-multipurpose-hall'],
     'interest' => 'hall',
     'schemaType' => 'EventVenue',
     'bookingUrl' => HALL_BOOKING_URL,

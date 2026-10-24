@@ -13,7 +13,7 @@ return [
     '/facilities/jeevanpat-gallery' => ['Life-story gallery', '0.8', 'monthly'],
     '/facilities/vadhu-var-suchak-kendra' => ['Matrimonial centre', '0.7', 'monthly'],
     '/student-hostel' => ['Student hostel', '0.8', 'monthly'],
-    '/halls' => ['Halls & booking', '0.9', 'monthly'],
+    '/venutai-chavan-multipurpose-hall' => ['Halls & booking', '0.9', 'monthly'],
     '/gallery' => ['Photo gallery', '0.6', 'monthly'],
     '/contact' => ['Contact', '0.7', 'yearly'],
     '/faq' => ['FAQ', '0.7', 'monthly'],

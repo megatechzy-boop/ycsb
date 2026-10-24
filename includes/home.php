@@ -113,7 +113,7 @@ require __DIR__ . '/header.php';
             <p class="hero-sub"><?= t('निगडी, प्राधिकरण, पिंपरी-चिंचवड येथे यशवंतराव चव्हाण स्मारक समितीने उभारलेले भव्य स्मारक - भावी पिढीसाठी प्रेरणा व मार्गदर्शनाचे केंद्र.', 'A grand memorial built by Yashwantrao Chavan Smarak Samiti at Pradhikaran, Nigdi, Pimpri-Chinchwad – a centre of inspiration and guidance for the next generation.') ?></p>
             <div class="btn-row">
                 <a href="#visit" class="btn btn-primary"><?= t('भेट द्या', 'Visit Us') ?></a>
-                <a href="<?= $L ?>/halls" class="btn btn-outline"><?= t('हॉल बुकिंग', 'Hall Booking') ?></a>
+                <a href="<?= $L ?>/venutai-chavan-multipurpose-hall" class="btn btn-outline"><?= t('हॉल बुकिंग', 'Hall Booking') ?></a>
                 <a href="#contact" class="btn btn-ghost"><?= t('संपर्क', 'Contact') ?></a>
             </div>
         </div>

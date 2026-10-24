@@ -9,8 +9,8 @@ $facilities = [
     ['hostel', 'विद्यार्थी वसतिगृह', '५२ खोल्या, १४४ विद्यार्थी-विद्यार्थिनींसाठी.', '/student-hostel'],
     ['jeevanpat', 'यशवंतराव चव्हाण जीवनपट दालन', 'संपूर्ण जीवनपट चित्र दालनाच्या स्वरूपात - महाराष्ट्रात फक्त येथे.', '/facilities/jeevanpat-gallery'],
     ['vadhu-var', 'पश्चिम महाराष्ट्र वधू-वर सूचक केंद्र', 'सर्व जाती-धर्मातील विवाहेच्छुक वधू-वरांसाठी.', '/facilities/vadhu-var-suchak-kendra'],
-    ['venutai-hall', 'स्व. वेणुताई चव्हाण बहुउद्देशीय सभागृह', '१२०० व ३५० आसन क्षमतेची वातानुकूलित सभागृहे.', '/halls'],
-    ['guest-room', 'पाहुण्यांच्या निवासासाठी खोल्या', '८ वातानुकूलित (A/C) खोल्या उपलब्ध.', '/halls'],
+    ['venutai-hall', 'स्व. वेणुताई चव्हाण बहुउद्देशीय सभागृह', '१२०० व ३५० आसन क्षमतेची वातानुकूलित सभागृहे.', '/venutai-chavan-multipurpose-hall'],
+    ['guest-room', 'पाहुण्यांच्या निवासासाठी खोल्या', '८ वातानुकूलित (A/C) खोल्या उपलब्ध.', '/venutai-chavan-multipurpose-hall'],
     ['jagtap-bust', 'स्व. आ. लक्ष्मणभाऊ जगताप अर्धाकृती पुतळा', 'स्मृती भवन उभारणीतील मोलाच्या योगदानाचे स्मरण.', '/smruti-bhavan-project'],
 ];
 
@@ -39,8 +39,8 @@ $facilitiesEn = [
     ['hostel', 'Student Hostel', '52 rooms for 144 male and female students.', '/en/student-hostel'],
     ['jeevanpat', 'Life-Story Gallery', 'His complete life in pictures – the only such gallery in Maharashtra.', '/en/facilities/jeevanpat-gallery'],
     ['vadhu-var', 'Matrimonial Centre', 'Paschim Maharashtra Vadhu-Var Suchak Kendra, open to all communities.', '/en/facilities/vadhu-var-suchak-kendra'],
-    ['venutai-hall', 'Late Venutai Chavan Multipurpose Hall', 'Air-conditioned halls seating 1,200 and 350.', '/en/halls'],
-    ['guest-room', 'Guest Rooms', '8 air-conditioned rooms.', '/en/halls'],
+    ['venutai-hall', 'Late Venutai Chavan Multipurpose Hall', 'Air-conditioned halls seating 1,200 and 350.', '/en/venutai-chavan-multipurpose-hall'],
+    ['guest-room', 'Guest Rooms', '8 air-conditioned rooms.', '/en/venutai-chavan-multipurpose-hall'],
     ['jagtap-bust', 'Bust of Late Laxmanbhau Jagtap, MLA', 'In memory of his key role in building the Smruti Bhavan.', '/en/smruti-bhavan-project'],
 ];
 

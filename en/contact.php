@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../includes/config.php';
 
 $topics = [
-    ['Hall booking', 'Halls for weddings, birthdays and other events.', '/en/halls', 'Hall details'],
+    ['Hall booking', 'Halls for weddings, birthdays and other events.', '/en/venutai-chavan-multipurpose-hall', 'Hall details'],
     ['Hostel admission', '52 rooms for 144 male and female students.', '/en/student-hostel', 'Hostel details'],
     ['Library admission', 'UPSC / MPSC competitive exam study library.', '/en/facilities/upsc-mpsc-library', 'Library details'],
     ['Matrimonial registration', 'For brides and grooms of all communities.', '/en/facilities/vadhu-var-suchak-kendra', 'Registration details'],
