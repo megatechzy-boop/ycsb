@@ -7,7 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$back = '/?sent=%s#contact';
+// Return to the page the form was sent from (local paths only)
+$path = $_POST['back'] ?? '/';
+if (!preg_match('#^/(?!/)[a-z0-9/-]*$#', $path)) {
+    $path = '/';
+}
+$back = $path . '?sent=%s#contact';
 
 // Honeypot: bots fill hidden fields
 if (!empty($_POST['website'])) {
@@ -17,7 +22,7 @@ if (!empty($_POST['website'])) {
 
 $name = trim(strip_tags($_POST['name'] ?? ''));
 $phone = preg_replace('/\D/', '', $_POST['phone'] ?? '');
-$interest = in_array($_POST['interest'] ?? '', ['hall', 'hostel', 'library', 'vadhu-var', 'visit', 'other'], true) ? $_POST['interest'] : 'other';
+$interest = in_array($_POST['interest'] ?? '', ['hall', 'hostel', 'library', 'history-library', 'guidance', 'vadhu-var', 'visit', 'other'], true) ? $_POST['interest'] : 'other';
 $message = trim(strip_tags($_POST['message'] ?? ''));
 
 if ($name === '' || mb_strlen($name) > 80 || strlen($phone) !== 10 || mb_strlen($message) > 1000) {

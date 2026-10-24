@@ -23,3 +23,13 @@
 
 ## Pages
 - [Home](https://www.example.com/)
+- [About Samiti](https://www.example.com/about-samiti)
+- [About Yashwantrao Chavan](https://www.example.com/about-yashwantrao-chavan)
+- [Smruti Bhavan Project](https://www.example.com/smruti-bhavan-project)
+- [Student Hostel](https://www.example.com/student-hostel)
+- [Statue](https://www.example.com/facilities/statue)
+- [Upsc Mpsc Library](https://www.example.com/facilities/upsc-mpsc-library)
+- [History Library](https://www.example.com/facilities/history-library)
+- [Student Guidance Centre](https://www.example.com/facilities/student-guidance-centre)
+- [Jeevanpat Gallery](https://www.example.com/facilities/jeevanpat-gallery)
+- [Vadhu Var Suchak Kendra](https://www.example.com/facilities/vadhu-var-suchak-kendra)

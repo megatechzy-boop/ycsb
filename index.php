@@ -330,29 +330,7 @@ require __DIR__ . '/includes/header.php';
                 <iframe src="<?= MAP_EMBED ?>" title="स्मृती भवन नकाशा" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-        <form class="inquiry-form" action="/inquiry.php" method="post">
-            <h3>चौकशी फॉर्म</h3>
-            <?php if (isset($_GET['sent'])): ?>
-                <p class="form-msg <?= $_GET['sent'] === '1' ? 'ok' : 'err' ?>">
-                    <?= $_GET['sent'] === '1' ? 'धन्यवाद! आम्ही लवकरच संपर्क करू.' : 'माफ करा, कृपया सर्व माहिती बरोबर भरा.' ?>
-                </p>
-            <?php endif; ?>
-            <label>नाव *<input type="text" name="name" required maxlength="80"></label>
-            <label>मोबाईल नंबर *<input type="tel" name="phone" required pattern="[0-9]{10}" maxlength="10" inputmode="numeric"></label>
-            <label>कशाबद्दल चौकशी?
-                <select name="interest">
-                    <option value="hall">सभागृह बुकिंग</option>
-                    <option value="hostel">विद्यार्थी वसतिगृह</option>
-                    <option value="library">स्पर्धा परीक्षा अभ्यासिका</option>
-                    <option value="vadhu-var">वधू-वर सूचक केंद्र</option>
-                    <option value="visit">स्मृती भवन भेट</option>
-                    <option value="other">इतर</option>
-                </select>
-            </label>
-            <label>संदेश<textarea name="message" rows="4" maxlength="1000"></textarea></label>
-            <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button type="submit" class="btn btn-primary">पाठवा</button>
-        </form>
+        <?php require __DIR__ . '/includes/inquiry-form.php'; ?>
     </div>
 </section>
 
