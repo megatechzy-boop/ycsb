@@ -1,11 +1,11 @@
 ---
 # cPanel Git Version Control deployment
 # cPanel runs these tasks when you click "Deploy HEAD Commit" (Git Version Control > Manage > Pull or Deploy).
-# Deploys to the ycbhavan.org document root (/home/<cpanel user>/ycbhavan.org/).
+# Deploys to the ycbhavan.org document root (/home/venutaihall/ycbhavan.org/).
 # If cPanel shows a different Document Root for the domain, change the path below.
 deployment:
   tasks:
-    - export DEPLOYPATH=$HOME/ycbhavan.org/
+    - export DEPLOYPATH=/home/venutaihall/ycbhavan.org/
     - /bin/mkdir -p $DEPLOYPATH
     # Copy the site; keep files that live only on the server (config.local.php)
     - /bin/rsync -a --exclude='.git' --exclude='.gitignore' --exclude='.cpanel.yml' --exclude='README.md' --exclude='DEPLOY.md' --exclude='includes/config.local.php' ./ $DEPLOYPATH
