@@ -6,6 +6,7 @@ $groups = [
         ['Where is the Yashwantrao Chavan Smruti Bhavan?', 'It is at ' . ADDRESS_STREET . ', Pimpri-Chinchwad, Pune ' . ADDRESS_PIN . ', next to Sant Tukaram Udyan.', '/en/contact'],
         ['Who built the Smruti Bhavan?', 'Yashwantrao Chavan Smarak Samiti, Pimpri-Chinchwad – a social organisation founded in 1989. Construction began in 2014 and was completed in September 2026.', '/en/about-samiti'],
         ['What can I see there?', 'The 15 ft full-length statue of Yashwantrao Chavan, his complete life-story gallery, the history library and the bust of Late Laxmanbhau Jagtap, MLA.', '/en/smruti-bhavan-project'],
+        ['Is the Smruti Bhavan the same as Yashwantrao Chavan Natya Gruha in Kothrud?', 'No. The Late Yashwantrao Chavan Smruti Bhavan is at Pradhikaran, Nigdi, Pimpri-Chinchwad and was built by Yashwantrao Chavan Smarak Samiti. Yashwantrao Chavan Natya Gruha in Kothrud, Pune is a separate theatre.', '/en/smruti-bhavan-project'],
         ['What are the visiting hours?', 'Please call +91 ' . PHONE_1 . ' before your visit for timings.', '/en/contact'],
     ],
     'Statue & life-story gallery' => [

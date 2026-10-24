@@ -310,6 +310,7 @@ require __DIR__ . '/header.php';
                 </details>
             <?php endforeach; ?>
         </div>
+        <div class="center"><a href="<?= $L ?>/faq" class="btn btn-outline"><?= t('सर्व प्रश्नोत्तरे पहा', 'See all questions') ?></a></div>
     </div>
 </section>
 

@@ -6,13 +6,23 @@ $canonical = SITE_URL . $page['path'];
 // Share image: the page banner photo, else the building
 $ogImage = SITE_URL . '/assets/images/' . ($hero['image'] ?? $page['ogImage'] ?? 'building') . '.webp';
 
-// Add width/height to local images that lack them, so the layout does not jump while loading (CLS)
+// For local images: add width/height (no layout jump while loading) and an 800px version
+// for phones and small cards (srcset), when assets/images/<name>-800.webp exists
 ob_start(function ($html) {
-    return preg_replace_callback('#<img src="(/assets/images/[\w.-]+)"(?![^>]*\bwidth=)#', function ($m) {
+    return preg_replace_callback('#<img src="(/assets/images/([\w-]+)\.webp)"([^>]*)>#', function ($m) {
         static $sizes = [];
-        $file = dirname(__DIR__) . $m[1];
+        $root = dirname(__DIR__);
+        $file = $root . $m[1];
         $sizes[$file] ??= is_file($file) ? getimagesize($file) : false;
-        return $sizes[$file] ? sprintf('%s width="%d" height="%d"', $m[0], $sizes[$file][0], $sizes[$file][1]) : $m[0];
+        $attrs = $m[3];
+        if ($sizes[$file] && !str_contains($attrs, 'width=')) {
+            $attrs .= sprintf(' width="%d" height="%d"', $sizes[$file][0], $sizes[$file][1]);
+        }
+        $small = '/assets/images/' . $m[2] . '-800.webp';
+        if ($sizes[$file] && is_file($root . $small) && !str_contains($attrs, 'srcset=')) {
+            $attrs .= sprintf(' srcset="%s 800w, %s %dw" sizes="(max-width: 860px) 100vw, 50vw"', $small, $m[1], $sizes[$file][0]);
+        }
+        return '<img src="' . $m[1] . '"' . $attrs . '>';
     }, $html);
 });
 
