@@ -96,7 +96,7 @@ require __DIR__ . '/includes/header.php';
             <p class="hero-sub">निगडी, प्राधिकरण, पिंपरी-चिंचवड येथे यशवंतराव चव्हाण स्मारक समितीने उभारलेले भव्य स्मारक - भावी पिढीसाठी प्रेरणा व मार्गदर्शनाचे केंद्र.</p>
             <div class="btn-row">
                 <a href="#visit" class="btn btn-primary">भेट द्या</a>
-                <a href="<?= HALL_BOOKING_URL ?>" class="btn btn-outline" target="_blank" rel="noopener">हॉल बुकिंग ↗</a>
+                <a href="/halls" class="btn btn-outline">हॉल बुकिंग</a>
                 <a href="#contact" class="btn btn-ghost">संपर्क</a>
             </div>
         </div>

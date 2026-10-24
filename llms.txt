@@ -33,3 +33,6 @@
 - [Student Guidance Centre](https://www.example.com/facilities/student-guidance-centre)
 - [Jeevanpat Gallery](https://www.example.com/facilities/jeevanpat-gallery)
 - [Vadhu Var Suchak Kendra](https://www.example.com/facilities/vadhu-var-suchak-kendra)
+- [Halls](https://www.example.com/halls)
+- [Gallery](https://www.example.com/gallery)
+- [Contact](https://www.example.com/contact)

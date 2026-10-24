@@ -28,7 +28,7 @@
                 <li><a href="/facilities/upsc-mpsc-library">स्पर्धा परीक्षा अभ्यासिका</a></li>
                 <li><a href="/student-hostel">विद्यार्थी वसतिगृह</a></li>
                 <li><a href="/facilities/vadhu-var-suchak-kendra">वधू-वर सूचक केंद्र</a></li>
-                <li><a href="<?= HALL_BOOKING_URL ?>" target="_blank" rel="noopener">हॉल बुकिंग ↗</a></li>
+                <li><a href="/halls">सभागृह व हॉल बुकिंग</a></li>
             </ul>
         </div>
         <div>

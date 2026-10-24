@@ -2,7 +2,7 @@
 // Renders a facility page from $f:
 //   slug, interest, title, h1, eyebrow, subtitle, description, image, heroImage, cutout (bool),
 //   intro (paragraphs), info (label => value), features (list), photos ([img, caption]),
-//   faqs ([q, a]), schemaType
+//   faqs ([q, a]), schemaType, bookingUrl (external booking button)
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/data.php';
 
@@ -80,6 +80,9 @@ require __DIR__ . '/page-hero.php';
                 <?php endforeach; ?>
             </dl>
             <div class="fact-box-cta">
+                <?php if (!empty($f['bookingUrl'])): ?>
+                    <a href="<?= e($f['bookingUrl']) ?>" class="btn btn-gold btn-sm fact-box-book" target="_blank" rel="noopener">ऑनलाइन बुकिंग - venutaihall.com ↗</a>
+                <?php endif; ?>
                 <a href="#contact" class="btn btn-primary btn-sm">चौकशी करा</a>
                 <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-outline btn-sm"><?= icon('phone') ?> कॉल करा</a>
             </div>

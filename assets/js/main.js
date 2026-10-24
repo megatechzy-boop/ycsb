@@ -86,6 +86,21 @@
         });
     }
 
+    // Gallery page category filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const cat = btn.dataset.filter;
+            filterBtns.forEach((b) => {
+                b.classList.toggle('active', b === btn);
+                b.setAttribute('aria-pressed', b === btn);
+            });
+            document.querySelectorAll('.masonry-item').forEach((item) => {
+                item.hidden = cat !== 'all' && item.dataset.cat !== cat;
+            });
+        });
+    });
+
     // Gallery lightbox
     const lightbox = document.querySelector('.lightbox');
     const lbImg = lightbox?.querySelector('img');

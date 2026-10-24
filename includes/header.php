@@ -61,7 +61,7 @@ $menu = [
         ['वधू-वर सूचक केंद्र', '/facilities/vadhu-var-suchak-kendra'],
     ]],
     'hostel' => ['वसतिगृह', '/student-hostel'],
-    'hall' => ['हॉल बुकिंग', HALL_BOOKING_URL],
+    'hall' => ['हॉल बुकिंग', '/halls'],
     'gallery' => ['गॅलरी', '/gallery'],
     'contact' => ['संपर्क', '/contact'],
 ];
