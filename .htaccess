@@ -1,5 +1,6 @@
 # Clean URLs: /about-samiti -> about-samiti.php
 Options -Indexes
+DirectoryIndex index.php index.html
 ErrorDocument 404 /404.php
 RewriteEngine On
 
