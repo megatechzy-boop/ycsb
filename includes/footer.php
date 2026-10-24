@@ -91,7 +91,7 @@
             <?php else: ?>
                 © <?= mr_num(date('Y')) ?> <?= e(ORG_NAME_MR) ?>. सर्व हक्क राखीव.
             <?php endif; ?>
-            <span>Website by Mega Techzy</span>
+            <span>Website by <a href="https://megatechzy.com" target="_blank" rel="noopener">Mega Techzy</a></span>
         </div>
     </div>
 </footer>
