@@ -53,10 +53,10 @@ $faqs = [
 $page = [
     'title' => 'यशवंतराव चव्हाण माहिती - महाराष्ट्राचे शिल्पकार | जीवनपट व कार्य',
     'description' => 'यशवंतराव चव्हाण (१९१३-१९८४) - संयुक्त महाराष्ट्राचे पहिले मुख्यमंत्री, भारताचे उपपंतप्रधान. जन्म, स्वातंत्र्य लढा, सहकार, पंचायत राज व महाराष्ट्राच्या जडणघडणीतील कार्य.',
-    'path' => '/about-yashwantrao-chavan',
-    'alternates' => ['mr' => '/about-yashwantrao-chavan', 'en' => '/en/about-yashwantrao-chavan'],
+    'path' => '/yashwantrao-chavan',
+    'alternates' => ['mr' => '/yashwantrao-chavan', 'en' => '/en/yashwantrao-chavan'],
     'active' => 'about',
-    'breadcrumb' => ['आमच्याबद्दल' => '/about-samiti', 'स्व. यशवंतराव चव्हाण' => '/about-yashwantrao-chavan'],
+    'breadcrumb' => ['आमच्याबद्दल' => '/yashwantrao-chavan-smarak-samiti', 'स्व. यशवंतराव चव्हाण' => '/yashwantrao-chavan'],
     'schema' => [
         [
             '@type' => 'Person',
@@ -170,7 +170,7 @@ require __DIR__ . '/includes/page-hero.php';
             <h2>संपूर्ण जीवनपट - चित्र दालनाच्या स्वरूपात</h2>
             <p>स्व. यशवंतराव चव्हाण यांचा संपूर्ण जीवनपट चित्र दालनाच्या स्वरूपात महाराष्ट्रात फक्त निगडी येथील स्मृती भवनात उभारण्यात आला आहे. सोबतच त्यांचा १५ फूट उंच पूर्णाकृती पुतळा - भारतातील सर्वांत उंच - येथे आहे.</p>
             <div class="btn-row">
-                <a href="/facilities/jeevanpat-gallery" class="btn btn-primary">जीवनपट दालन</a>
+                <a href="/yashwantrao-chavan-jeevanpat-gallery" class="btn btn-primary">जीवनपट दालन</a>
                 <a href="/#visit" class="btn btn-outline">भेट द्या</a>
             </div>
         </div>

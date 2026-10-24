@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 
 $f = [
-    'slug' => 'student-guidance-centre',
+    'slug' => 'hirabai-landge-student-guidance-centre',
     'interest' => 'guidance',
     'schemaType' => 'EducationalOrganization',
     'title' => 'विद्यार्थी मार्गदर्शन केंद्र निगडी | स्व. हिराबाई किसनराव लांडगे केंद्र',
@@ -37,4 +37,4 @@ $f = [
         ['मार्गदर्शन केंद्र कुठे आहे?', 'हे केंद्र निगडी प्राधिकरण येथील स्व. यशवंतराव चव्हाण स्मृती भवनात आहे.'],
     ],
 ];
-require __DIR__ . '/../includes/facility-template.php';
+require __DIR__ . '/includes/facility-template.php';

@@ -12,10 +12,10 @@ $projectFacts = [
 $page = [
     'title' => 'स्व. यशवंतराव चव्हाण स्मृती भवन प्रकल्प, निगडी | इतिहास व सुविधा',
     'description' => 'निगडी प्राधिकरण येथील ४४ गुंठे भूखंडावर १.५ लाख चौ. फूट बांधकाम असलेले स्व. यशवंतराव चव्हाण स्मृती भवन - १९८९ ते २०२६ प्रवास, सुविधा व पत्ता.',
-    'path' => '/smruti-bhavan-project',
-    'alternates' => ['mr' => '/smruti-bhavan-project', 'en' => '/en/smruti-bhavan-project'],
+    'path' => '/yashwantrao-chavan-smruti-bhavan',
+    'alternates' => ['mr' => '/yashwantrao-chavan-smruti-bhavan', 'en' => '/en/yashwantrao-chavan-smruti-bhavan'],
     'active' => 'about',
-    'breadcrumb' => ['आमच्याबद्दल' => '/about-samiti', 'स्मृती भवन प्रकल्प' => '/smruti-bhavan-project'],
+    'breadcrumb' => ['आमच्याबद्दल' => '/yashwantrao-chavan-smarak-samiti', 'स्मृती भवन प्रकल्प' => '/yashwantrao-chavan-smruti-bhavan'],
     'schema' => [
         [
             '@type' => ['TouristAttraction', 'Place'],

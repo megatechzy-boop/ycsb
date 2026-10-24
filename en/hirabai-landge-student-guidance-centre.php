@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $f = [
     'lang' => 'en',
-    'slug' => 'student-guidance-centre',
+    'slug' => 'hirabai-landge-student-guidance-centre',
     'interest' => 'guidance',
     'schemaType' => 'EducationalOrganization',
     'title' => 'Student Guidance Centre, Nigdi | Late Hirabai Kisanrao Landge Centre',
@@ -38,4 +38,4 @@ $f = [
         ['Where is the guidance centre?', 'It is in the Yashwantrao Chavan Smruti Bhavan at Pradhikaran, Nigdi.'],
     ],
 ];
-require __DIR__ . '/../../includes/facility-template.php';
+require __DIR__ . '/../includes/facility-template.php';

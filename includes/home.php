@@ -143,8 +143,8 @@ require __DIR__ . '/header.php';
             <p><?= t('थोर स्वातंत्र्य सेनानी, महाराष्ट्राचे शिल्पकार, संयुक्त महाराष्ट्राचे पहिले मुख्यमंत्री आणि भारताचे माजी उपपंतप्रधान स्व. यशवंतराव चव्हाण यांच्या औद्योगिक व सहकार धोरणांमुळे महाराष्ट्राच्या कानाकोपऱ्यात उद्योग, सहकारी साखर कारखाने, बँका व पतसंस्थांचे जाळे विणले गेले.', 'Freedom fighter, architect of Maharashtra, first Chief Minister of Maharashtra and former Deputy Prime Minister of India – Late Yashwantrao Chavan\'s industrial and cooperative policies spread industries, cooperative sugar factories, banks and credit societies to every corner of Maharashtra.') ?></p>
             <p><?= t('त्यांच्या कार्याची प्रेरणा भावी पिढीतील युवकांना मिळावी म्हणून <strong>यशवंतराव चव्हाण स्मारक समिती, पिंपरी-चिंचवड</strong> यांनी निगडी प्राधिकरण येथे हे भव्य स्मृती भवन उभारले आहे.', 'So that young people draw inspiration from his work, <strong>Yashwantrao Chavan Smarak Samiti, Pimpri-Chinchwad</strong> has built this grand Smruti Bhavan at Nigdi Pradhikaran.') ?></p>
             <div class="btn-row">
-                <a href="<?= $L ?>/about-samiti" class="btn btn-primary"><?= t('समितीविषयी', 'About the Samiti') ?></a>
-                <a href="<?= $L ?>/about-yashwantrao-chavan" class="btn btn-outline"><?= t('यशवंतराव चव्हाण', 'Yashwantrao Chavan') ?></a>
+                <a href="<?= $L ?>/yashwantrao-chavan-smarak-samiti" class="btn btn-primary"><?= t('समितीविषयी', 'About the Samiti') ?></a>
+                <a href="<?= $L ?>/yashwantrao-chavan" class="btn btn-outline"><?= t('यशवंतराव चव्हाण', 'Yashwantrao Chavan') ?></a>
             </div>
         </div>
     </div>
@@ -182,7 +182,7 @@ require __DIR__ . '/header.php';
             <p class="eyebrow eyebrow-gold"><?= t('भारतात सर्वांत उंच', 'Tallest in India') ?></p>
             <h2><?= t('स्व. यशवंतराव चव्हाण यांचा <span class="gold">१५ फूट</span> पूर्णाकृती पुतळा', 'The <span class="gold">15 ft</span> full-length statue of Yashwantrao Chavan') ?></h2>
             <p><?= t('स्मृती भवनाच्या प्रवेशद्वारासमोर उभारलेला हा पुतळा स्व. यशवंतराव चव्हाण यांचा भारतातील सर्वांत उंच पुतळा आहे. महाराष्ट्राच्या शिल्पकाराला वंदन करण्यासाठी सर्वांनी अवश्य भेट द्यावी.', 'Standing at the entrance of the Smruti Bhavan, this is the tallest statue of Yashwantrao Chavan in India. Everyone is welcome to visit and pay tribute to the architect of Maharashtra.') ?></p>
-            <a href="<?= $L ?>/facilities/statue" class="btn btn-gold"><?= t('पुतळ्याविषयी अधिक', 'More about the statue') ?></a>
+            <a href="<?= $L ?>/yashwantrao-chavan-statue" class="btn btn-gold"><?= t('पुतळ्याविषयी अधिक', 'More about the statue') ?></a>
         </div>
     </div>
 </section>
@@ -204,7 +204,7 @@ require __DIR__ . '/header.php';
                 </li>
             <?php endforeach; ?>
         </ol>
-        <div class="center"><a href="<?= $L ?>/smruti-bhavan-project" class="btn btn-primary"><?= t('संपूर्ण प्रकल्प माहिती', 'Full project details') ?></a></div>
+        <div class="center"><a href="<?= $L ?>/yashwantrao-chavan-smruti-bhavan" class="btn btn-primary"><?= t('संपूर्ण प्रकल्प माहिती', 'Full project details') ?></a></div>
     </div>
 </section>
 

@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 
 $f = [
-    'slug' => 'vadhu-var-suchak-kendra',
+    'slug' => 'paschim-maharashtra-vadhu-var-suchak-kendra',
     'interest' => 'vadhu-var',
     'schemaType' => 'LocalBusiness',
     'title' => 'वधू-वर सूचक केंद्र पिंपरी-चिंचवड | पश्चिम महाराष्ट्र',
@@ -37,4 +37,4 @@ $f = [
         ['हे केंद्र कोणासाठी आहे?', 'हे केंद्र सर्व जाती-धर्मातील विवाहेच्छुक वधू-वरांसाठी आहे.'],
     ],
 ];
-require __DIR__ . '/../includes/facility-template.php';
+require __DIR__ . '/includes/facility-template.php';

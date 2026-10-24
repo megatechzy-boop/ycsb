@@ -9,9 +9,9 @@ $people = [
 
 $topics = [
     ['हॉल बुकिंग', 'विवाह, वाढदिवस व इतर कार्यक्रमांसाठी सभागृह.', '/venutai-chavan-multipurpose-hall', 'सभागृह माहिती'],
-    ['वसतिगृह प्रवेश', '५२ खोल्या, १४४ विद्यार्थी-विद्यार्थिनी.', '/student-hostel', 'वसतिगृह माहिती'],
-    ['अभ्यासिका प्रवेश', 'UPSC / MPSC स्पर्धा परीक्षा अभ्यासिका.', '/facilities/upsc-mpsc-library', 'अभ्यासिका माहिती'],
-    ['वधू-वर नोंदणी', 'सर्व जाती-धर्मातील वधू-वरांसाठी.', '/facilities/vadhu-var-suchak-kendra', 'नोंदणी माहिती'],
+    ['वसतिगृह प्रवेश', '५२ खोल्या, १४४ विद्यार्थी-विद्यार्थिनी.', '/student-hostel-nigdi', 'वसतिगृह माहिती'],
+    ['अभ्यासिका प्रवेश', 'UPSC / MPSC स्पर्धा परीक्षा अभ्यासिका.', '/arun-kirloskar-upsc-mpsc-library', 'अभ्यासिका माहिती'],
+    ['वधू-वर नोंदणी', 'सर्व जाती-धर्मातील वधू-वरांसाठी.', '/paschim-maharashtra-vadhu-var-suchak-kendra', 'नोंदणी माहिती'],
 ];
 
 $formInterest = in_array($_GET['topic'] ?? '', ['hall', 'hostel', 'library', 'vadhu-var', 'visit'], true) ? $_GET['topic'] : 'visit';

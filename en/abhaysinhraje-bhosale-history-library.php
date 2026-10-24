@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $f = [
     'lang' => 'en',
-    'slug' => 'history-library',
+    'slug' => 'abhaysinhraje-bhosale-history-library',
     'interest' => 'history-library',
     'schemaType' => 'Library',
     'title' => 'History Library, Nigdi | Abhaysinhraje Bhosale Library',
@@ -40,4 +40,4 @@ $f = [
         ['How do I become a member?', 'For membership and timings, fill in the form on this page or contact the Samiti office.'],
     ],
 ];
-require __DIR__ . '/../../includes/facility-template.php';
+require __DIR__ . '/../includes/facility-template.php';

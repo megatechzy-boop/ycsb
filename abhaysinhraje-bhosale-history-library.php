@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 
 $f = [
-    'slug' => 'history-library',
+    'slug' => 'abhaysinhraje-bhosale-history-library',
     'interest' => 'history-library',
     'schemaType' => 'Library',
     'title' => 'इतिहास ग्रंथालय निगडी | अभयसिंहराजे भोसले ग्रंथालय',
@@ -39,4 +39,4 @@ $f = [
         ['ग्रंथालयाचे सभासद कसे व्हावे?', 'सभासदत्व व वेळांबद्दल माहितीसाठी या पानावरील फॉर्म भरा किंवा समितीच्या कार्यालयाशी संपर्क करा.'],
     ],
 ];
-require __DIR__ . '/../includes/facility-template.php';
+require __DIR__ . '/includes/facility-template.php';

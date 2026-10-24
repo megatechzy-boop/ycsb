@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $f = [
     'lang' => 'en',
-    'slug' => 'vadhu-var-suchak-kendra',
+    'slug' => 'paschim-maharashtra-vadhu-var-suchak-kendra',
     'interest' => 'vadhu-var',
     'schemaType' => 'LocalBusiness',
     'title' => 'Matrimonial Centre, Pimpri-Chinchwad | Vadhu-Var Kendra',
@@ -38,4 +38,4 @@ $f = [
         ['Who can register?', 'Brides and grooms of all castes and religions.'],
     ],
 ];
-require __DIR__ . '/../../includes/facility-template.php';
+require __DIR__ . '/../includes/facility-template.php';

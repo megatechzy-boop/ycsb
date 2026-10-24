@@ -4,9 +4,9 @@ require_once __DIR__ . '/../includes/config.php';
 $f = [
     'lang' => 'en',
     'slug' => 'student-hostel',
-    'path' => '/student-hostel',
+    'path' => '/student-hostel-nigdi',
     'active' => 'hostel',
-    'breadcrumb' => ['Student Hostel' => '/en/student-hostel'],
+    'breadcrumb' => ['Student Hostel' => '/en/student-hostel-nigdi'],
     'interest' => 'hostel',
     'schemaType' => 'Hostel',
     'title' => 'Student Hostel in Nigdi Pradhikaran, Pimpri-Chinchwad | 52 Rooms',

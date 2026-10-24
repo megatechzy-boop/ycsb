@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $f = [
     'lang' => 'en',
-    'slug' => 'upsc-mpsc-library',
+    'slug' => 'arun-kirloskar-upsc-mpsc-library',
     'interest' => 'library',
     'schemaType' => 'Library',
     'title' => 'UPSC MPSC Study Library, Nigdi Pimpri-Chinchwad',
@@ -42,4 +42,4 @@ $f = [
         ['Is accommodation available?', 'Yes. The same building has a student hostel with 52 rooms for 144 male and female students.'],
     ],
 ];
-require __DIR__ . '/../../includes/facility-template.php';
+require __DIR__ . '/../includes/facility-template.php';

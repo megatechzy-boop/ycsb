@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 
 $f = [
-    'slug' => 'statue',
+    'slug' => 'yashwantrao-chavan-statue',
     'interest' => 'visit',
     'schemaType' => ['TouristAttraction', 'LandmarksOrHistoricalBuildings'],
     'title' => 'यशवंतराव चव्हाण यांचा १५ फूट पुतळा, निगडी | भारतातील सर्वांत उंच पुतळा',
@@ -41,4 +41,4 @@ $f = [
         ['पुतळा पाहण्यासाठी शुल्क आहे का?', 'पुतळा सर्वांसाठी खुला आहे. भेटीच्या वेळेसाठी समितीच्या कार्यालयाशी संपर्क करा.'],
     ],
 ];
-require __DIR__ . '/../includes/facility-template.php';
+require __DIR__ . '/includes/facility-template.php';

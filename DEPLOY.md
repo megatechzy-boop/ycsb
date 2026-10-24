@@ -27,7 +27,7 @@ The site is plain PHP (no database, no build step). It needs Apache with `mod_re
 
 ## After the first deploy, check
 
-- `/` and `/en/` open; `/about-samiti.php` redirects to `/about-samiti`
+- `/` and `/en/` open; `/yashwantrao-chavan.php` redirects to `/yashwantrao-chavan`
 - `/sitemap.xml`, `/robots.txt`, `/llms.txt` show the real domain
 - The enquiry form sends mail (many hosts block PHP `mail()`; if so, switch to SMTP)
 - Submit `https://your-domain/sitemap.xml` in Google Search Console

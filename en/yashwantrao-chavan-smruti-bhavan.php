@@ -6,10 +6,10 @@ $page = [
     'lang' => 'en',
     'title' => 'Smruti Bhavan Project, Nigdi | History & Facilities',
     'description' => 'The Yashwantrao Chavan Smruti Bhavan – 1.5 lakh sq ft of construction on 44 gunthe at Pradhikaran, Nigdi. The journey from 1989 to 2026, facilities and location.',
-    'path' => '/en/smruti-bhavan-project',
-    'alternates' => ['mr' => '/smruti-bhavan-project', 'en' => '/en/smruti-bhavan-project'],
+    'path' => '/en/yashwantrao-chavan-smruti-bhavan',
+    'alternates' => ['mr' => '/yashwantrao-chavan-smruti-bhavan', 'en' => '/en/yashwantrao-chavan-smruti-bhavan'],
     'active' => 'about',
-    'breadcrumb' => ['About' => '/en/about-samiti', 'Smruti Bhavan Project' => '/en/smruti-bhavan-project'],
+    'breadcrumb' => ['About' => '/en/yashwantrao-chavan-smarak-samiti', 'Smruti Bhavan Project' => '/en/yashwantrao-chavan-smruti-bhavan'],
     'schema' => [[
         '@type' => ['TouristAttraction', 'Place'],
         '@id' => SITE_URL . '/#smruti-bhavan',

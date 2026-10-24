@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $f = [
     'lang' => 'en',
-    'slug' => 'jeevanpat-gallery',
+    'slug' => 'yashwantrao-chavan-jeevanpat-gallery',
     'interest' => 'visit',
     'schemaType' => ['Museum', 'TouristAttraction'],
     'title' => 'Yashwantrao Chavan Life-Story Gallery, Nigdi | Only One in Maharashtra',
@@ -39,4 +39,4 @@ $f = [
         ['Can schools bring a trip?', 'Yes. Please call the Samiti office in advance to fix a time.'],
     ],
 ];
-require __DIR__ . '/../../includes/facility-template.php';
+require __DIR__ . '/../includes/facility-template.php';

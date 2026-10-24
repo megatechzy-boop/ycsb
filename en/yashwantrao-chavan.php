@@ -48,10 +48,10 @@ $page = [
     'lang' => 'en',
     'title' => 'Yashwantrao Chavan Biography | Architect of Maharashtra',
     'description' => 'Yashwantrao Chavan (1913–1984): first Chief Minister of Maharashtra and Deputy Prime Minister of India. His life, freedom struggle and work.',
-    'path' => '/en/about-yashwantrao-chavan',
-    'alternates' => ['mr' => '/about-yashwantrao-chavan', 'en' => '/en/about-yashwantrao-chavan'],
+    'path' => '/en/yashwantrao-chavan',
+    'alternates' => ['mr' => '/yashwantrao-chavan', 'en' => '/en/yashwantrao-chavan'],
     'active' => 'about',
-    'breadcrumb' => ['About' => '/en/about-samiti', 'Yashwantrao Chavan' => '/en/about-yashwantrao-chavan'],
+    'breadcrumb' => ['About' => '/en/yashwantrao-chavan-smarak-samiti', 'Yashwantrao Chavan' => '/en/yashwantrao-chavan'],
     'schema' => [
         [
             '@type' => 'Person',
@@ -156,7 +156,7 @@ require __DIR__ . '/../includes/page-hero.php';
             <h2>His complete life story – as a picture gallery</h2>
             <p>The complete life story of Yashwantrao Chavan has been set up as a picture gallery – in Maharashtra, only at the Smruti Bhavan in Nigdi. His 15 ft full-length statue, the tallest in India, stands at the entrance.</p>
             <div class="btn-row">
-                <a href="/en/facilities/jeevanpat-gallery" class="btn btn-primary">Life-story gallery</a>
+                <a href="/en/yashwantrao-chavan-jeevanpat-gallery" class="btn btn-primary">Life-story gallery</a>
                 <a href="/en/contact" class="btn btn-outline">Visit</a>
             </div>
         </div>

@@ -20,10 +20,10 @@ $page = [
     'lang' => 'en',
     'title' => 'Yashwantrao Chavan Smarak Samiti, Pimpri-Chinchwad | About Us',
     'description' => 'Yashwantrao Chavan Smarak Samiti, Pimpri-Chinchwad – working since 1989. Our story, aims, office bearers and partner associations.',
-    'path' => '/en/about-samiti',
-    'alternates' => ['mr' => '/about-samiti', 'en' => '/en/about-samiti'],
+    'path' => '/en/yashwantrao-chavan-smarak-samiti',
+    'alternates' => ['mr' => '/yashwantrao-chavan-smarak-samiti', 'en' => '/en/yashwantrao-chavan-smarak-samiti'],
     'active' => 'about',
-    'breadcrumb' => ['About' => '/en/about-samiti'],
+    'breadcrumb' => ['About' => '/en/yashwantrao-chavan-smarak-samiti'],
 ];
 
 $hero = [
@@ -45,7 +45,7 @@ require __DIR__ . '/../includes/page-hero.php';
             <h2>A memorial born of social commitment</h2>
             <p>Yashwantrao Chavan's industrial and cooperative policies spread industries, cooperative sugar factories, banks and credit societies across Maharashtra. His admirers felt his memorial should stand in the industrial city of Pimpri-Chinchwad as a way of repaying that debt.</p>
             <p>Moved by this commitment, they came together in <strong>1989</strong> and registered "Yashwantrao Chavan Smarak Samiti" under the Bombay Public Trusts Act, 1950. In 1991 the Samiti acquired 44 gunthe of land at Pradhikaran, Nigdi, where it has built the grand Smruti Bhavan.</p>
-            <a href="/en/smruti-bhavan-project" class="btn btn-primary">The Smruti Bhavan project</a>
+            <a href="/en/yashwantrao-chavan-smruti-bhavan" class="btn btn-primary">The Smruti Bhavan project</a>
         </div>
     </div>
 </section>

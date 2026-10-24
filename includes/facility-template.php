@@ -9,7 +9,7 @@ require_once __DIR__ . '/data.php';
 // English pages live under /en with the same path as the Marathi page
 $isEnPage = ($f['lang'] ?? 'mr') === 'en';
 $prefix = $isEnPage ? '/en' : '';
-$mrPath = $f['path'] ?? '/facilities/' . $f['slug'];
+$mrPath = $f['path'] ?? '/' . $f['slug'];
 $path = $prefix . $mrPath;
 if ($isEnPage) {
     $facilities = $facilitiesEn;
@@ -56,7 +56,7 @@ $formInterest = $f['interest'] ?? 'other';
 
 // Other facilities, excluding this one and external links
 // Other facilities: the next three after this one, wrapping around
-$internal = array_values(array_filter($facilities, fn($x) => str_starts_with($x[3], '/') && !str_ends_with($x[3], '/smruti-bhavan-project')));
+$internal = array_values(array_filter($facilities, fn($x) => str_starts_with($x[3], '/') && !str_ends_with($x[3], '/yashwantrao-chavan-smruti-bhavan')));
 $self = array_search($path, array_column($internal, 3), true);
 $related = [];
 for ($i = 1; count($related) < 3 && $i < count($internal); $i++) {

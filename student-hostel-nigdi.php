@@ -3,9 +3,9 @@ require_once __DIR__ . '/includes/config.php';
 
 $f = [
     'slug' => 'student-hostel',
-    'path' => '/student-hostel',
+    'path' => '/student-hostel-nigdi',
     'active' => 'hostel',
-    'breadcrumb' => ['विद्यार्थी वसतिगृह' => '/student-hostel'],
+    'breadcrumb' => ['विद्यार्थी वसतिगृह' => '/student-hostel-nigdi'],
     'interest' => 'hostel',
     'schemaType' => 'Hostel',
     'title' => 'विद्यार्थी वसतिगृह निगडी प्राधिकरण | Student Hostel Pimpri Chinchwad',

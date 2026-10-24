@@ -16,9 +16,9 @@
         <div>
             <h4>Explore</h4>
             <ul>
-                <li><a href="/en/about-samiti">Smarak Samiti</a></li>
-                <li><a href="/en/about-yashwantrao-chavan">Yashwantrao Chavan</a></li>
-                <li><a href="/en/smruti-bhavan-project">Smruti Bhavan Project</a></li>
+                <li><a href="/en/yashwantrao-chavan-smarak-samiti">Smarak Samiti</a></li>
+                <li><a href="/en/yashwantrao-chavan">Yashwantrao Chavan</a></li>
+                <li><a href="/en/yashwantrao-chavan-smruti-bhavan">Smruti Bhavan Project</a></li>
                 <li><a href="/en/gallery">Gallery</a></li>
                 <li><a href="/en/news-events">News &amp; Events</a></li>
             </ul>
@@ -26,9 +26,9 @@
         <div>
             <h4>Facilities</h4>
             <ul>
-                <li><a href="/en/facilities/upsc-mpsc-library">UPSC &amp; MPSC Library</a></li>
-                <li><a href="/en/student-hostel">Student Hostel</a></li>
-                <li><a href="/en/facilities/vadhu-var-suchak-kendra">Matrimonial Centre</a></li>
+                <li><a href="/en/arun-kirloskar-upsc-mpsc-library">UPSC &amp; MPSC Library</a></li>
+                <li><a href="/en/student-hostel-nigdi">Student Hostel</a></li>
+                <li><a href="/en/paschim-maharashtra-vadhu-var-suchak-kendra">Matrimonial Centre</a></li>
                 <li><a href="/en/venutai-chavan-multipurpose-hall">Halls &amp; Booking</a></li>
             </ul>
         </div>
@@ -57,9 +57,9 @@
         <div>
             <h4>आमच्याबद्दल</h4>
             <ul>
-                <li><a href="/about-samiti">स्मारक समिती</a></li>
-                <li><a href="/about-yashwantrao-chavan">स्व. यशवंतराव चव्हाण</a></li>
-                <li><a href="/smruti-bhavan-project">स्मृती भवन प्रकल्प</a></li>
+                <li><a href="/yashwantrao-chavan-smarak-samiti">स्मारक समिती</a></li>
+                <li><a href="/yashwantrao-chavan">स्व. यशवंतराव चव्हाण</a></li>
+                <li><a href="/yashwantrao-chavan-smruti-bhavan">स्मृती भवन प्रकल्प</a></li>
                 <li><a href="/gallery">गॅलरी</a></li>
                 <li><a href="/news-events">बातम्या व कार्यक्रम</a></li>
             </ul>
@@ -67,9 +67,9 @@
         <div>
             <h4>सोयी-सुविधा</h4>
             <ul>
-                <li><a href="/facilities/upsc-mpsc-library">स्पर्धा परीक्षा अभ्यासिका</a></li>
-                <li><a href="/student-hostel">विद्यार्थी वसतिगृह</a></li>
-                <li><a href="/facilities/vadhu-var-suchak-kendra">वधू-वर सूचक केंद्र</a></li>
+                <li><a href="/arun-kirloskar-upsc-mpsc-library">स्पर्धा परीक्षा अभ्यासिका</a></li>
+                <li><a href="/student-hostel-nigdi">विद्यार्थी वसतिगृह</a></li>
+                <li><a href="/paschim-maharashtra-vadhu-var-suchak-kendra">वधू-वर सूचक केंद्र</a></li>
                 <li><a href="/venutai-chavan-multipurpose-hall">सभागृह व हॉल बुकिंग</a></li>
             </ul>
         </div>

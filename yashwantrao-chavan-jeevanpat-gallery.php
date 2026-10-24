@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 
 $f = [
-    'slug' => 'jeevanpat-gallery',
+    'slug' => 'yashwantrao-chavan-jeevanpat-gallery',
     'interest' => 'visit',
     'schemaType' => ['Museum', 'TouristAttraction'],
     'title' => 'यशवंतराव चव्हाण जीवनपट दालन, निगडी | महाराष्ट्रातील एकमेव चित्र दालन',
@@ -38,4 +38,4 @@ $f = [
         ['शाळेची सहल आणता येईल का?', 'होय. शाळा-कॉलेजच्या सहलींसाठी आधी समितीच्या कार्यालयाशी संपर्क करून वेळ ठरवावी.'],
     ],
 ];
-require __DIR__ . '/../includes/facility-template.php';
+require __DIR__ . '/includes/facility-template.php';

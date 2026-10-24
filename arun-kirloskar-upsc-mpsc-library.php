@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 
 $f = [
-    'slug' => 'upsc-mpsc-library',
+    'slug' => 'arun-kirloskar-upsc-mpsc-library',
     'interest' => 'library',
     'schemaType' => 'Library',
     'title' => 'UPSC MPSC अभ्यासिका निगडी, पिंपरी-चिंचवड | स्मृती भवन',
@@ -41,4 +41,4 @@ $f = [
         ['अभ्यासिकेसोबत राहण्याची सोय आहे का?', 'होय. याच इमारतीत ५२ खोल्यांचे विद्यार्थी वसतिगृह असून १४४ विद्यार्थी-विद्यार्थिनींची निवास क्षमता आहे.'],
     ],
 ];
-require __DIR__ . '/../includes/facility-template.php';
+require __DIR__ . '/includes/facility-template.php';

@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $f = [
     'lang' => 'en',
-    'slug' => 'statue',
+    'slug' => 'yashwantrao-chavan-statue',
     'interest' => 'visit',
     'schemaType' => ['TouristAttraction', 'LandmarksOrHistoricalBuildings'],
     'title' => '15 ft Yashwantrao Chavan Statue, Nigdi | Tallest in India',
@@ -42,4 +42,4 @@ $f = [
         ['Is there an entry fee?', 'The statue is open to all. Please call the office for visiting hours.'],
     ],
 ];
-require __DIR__ . '/../../includes/facility-template.php';
+require __DIR__ . '/../includes/facility-template.php';
