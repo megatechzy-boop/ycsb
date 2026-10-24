@@ -7,17 +7,26 @@ RewriteEngine On
 # RewriteCond %{HTTPS} off
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect /page.php to /page
-RewriteCond %{THE_REQUEST} \s/([^.?\s]+)\.php[\s?] [NC]
-RewriteCond %1 !^inquiry$
+# Block direct access to includes (before any rewrite)
+RewriteRule ^includes/ - [F,L]
+
+# /index.php and /en/index.php -> folder URL
+RewriteCond %{THE_REQUEST} \s/((?:[^/\s]+/)*)index\.php[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
+# Redirect /page.php to /page (GET only, so form posts keep working)
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{THE_REQUEST} \s/([^.?\s]+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Remove trailing slash from page URLs (/about-samiti/ -> /about-samiti)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Serve /page from page.php
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.+?)/?$ $1.php [L]
-
-# Block direct access to includes
-RewriteRule ^includes/ - [F,L]
+RewriteRule ^(.+)$ $1.php [L]
 
 <IfModule mod_expires.c>
     ExpiresActive On

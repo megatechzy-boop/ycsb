@@ -2,7 +2,7 @@
 // Shared inquiry form. Optional $formInterest preselects the topic; replies return to $page['path'].
 $formInterest = $formInterest ?? 'hall';
 ?>
-<form class="inquiry-form" action="/inquiry.php" method="post">
+<form class="inquiry-form" action="/inquiry" method="post">
     <input type="hidden" name="back" value="<?= e($page['path']) ?>">
     <h3>चौकशी फॉर्म</h3>
     <?php if (isset($_GET['sent'])): ?>
