@@ -11,7 +11,6 @@ $annual = [
 $news = [];
 
 $page = [
-    'noindex' => empty($news),
     'lang' => 'en',
     'title' => 'News & Events | Yashwantrao Chavan Smruti Bhavan, Nigdi',
     'description' => 'Events, anniversary tributes, activities and news from the Yashwantrao Chavan Smruti Bhavan, Nigdi.',

@@ -35,12 +35,10 @@ The website is in Marathi (default) and English (/en/). Facts below are the same
 
 ## Pages (English)
 <?php foreach ($pages as $mr => [$label]): ?>
-<?php if (in_array($mr, ['/privacy-policy', '/terms', '/news-events'], true)) continue; ?>
 - [<?= $label ?>](<?= SITE_URL . ($mr === '/' ? '/en/' : '/en' . $mr) ?>)
 <?php endforeach; ?>
 
 ## Pages (Marathi)
 <?php foreach ($pages as $mr => [$label]): ?>
-<?php if (in_array($mr, ['/privacy-policy', '/terms', '/news-events'], true)) continue; ?>
 - [<?= $label ?>](<?= SITE_URL . $mr ?>)
 <?php endforeach; ?>

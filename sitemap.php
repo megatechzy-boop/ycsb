@@ -15,7 +15,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <?php foreach ($pages as $mr => [$label, $priority, $freq]): ?>
-<?php if ($mr === '/news-events') continue; // noindex until news is published ?>
 <?php $en = $mr === '/' ? '/en/' : '/en' . $mr; ?>
 <?php foreach ([$mr, $en] as $path): ?>
 <?php $file = page_file($path); ?>
