@@ -29,7 +29,7 @@ $halls = [
 ];
 
 $gallery = [
-    ['building', 'स्मृती भवनाची इमारत'],
+    ['building', 'स्मृती भवनाची इमारत व यशवंतराव चव्हाण यांचा पुतळा'],
     ['venutai-hall', 'स्व. वेणुताई चव्हाण बहुउद्देशीय सभागृह - बाल्कनीसह'],
     ['hall-large', 'मोठे सभागृह - स्टेज व झुंबर'],
     ['history-library', 'स्व. श्रीमंत छ. अभयसिंहराजे भोसले इतिहास ग्रंथालय'],
@@ -146,7 +146,7 @@ require __DIR__ . '/includes/header.php';
 <section class="section about">
     <div class="container about-grid">
         <figure class="about-img">
-            <img src="/assets/images/building.webp" alt="स्व. यशवंतराव चव्हाण स्मृती भवन इमारत, निगडी" loading="lazy" width="1355" height="940">
+            <img src="/assets/images/building.webp" alt="स्व. यशवंतराव चव्हाण स्मृती भवन इमारत व पुतळा - ड्रोन दृश्य, निगडी प्राधिकरण" loading="lazy" width="1600" height="900">
         </figure>
         <div>
             <p class="eyebrow">आमच्याबद्दल</p>
