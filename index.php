@@ -100,12 +100,10 @@ require __DIR__ . '/includes/header.php';
 <!-- Hero -->
 <section class="hero">
     <div class="container hero-grid">
-        <div class="hex-cluster" aria-hidden="true">
-            <div class="hex-ring"></div>
-            <?php foreach (['chavan-portrait', 'statue', 'building', 'hall-large', 'jeevanpat', 'library-upsc', 'hostel'] as $i => $img): ?>
-                <div class="hex hex-<?= $i ?>"><img src="/assets/images/<?= $img ?>.webp" alt=""<?= $i ? ' loading="lazy"' : '' ?>></div>
-            <?php endforeach; ?>
-        </div>
+        <figure class="hero-statue">
+            <img src="/assets/images/statue-hero.webp" alt="स्व. यशवंतराव चव्हाण यांचा १५ फूट पूर्णाकृती पुतळा, स्मृती भवन निगडी" width="206" height="216" fetchpriority="high">
+            <figcaption class="statue-badge"><strong>१५ फूट</strong><span>भारतातील सर्वांत उंच पुतळा</span></figcaption>
+        </figure>
         <div class="hero-text">
             <p class="eyebrow">महाराष्ट्राचे शिल्पकार · संयुक्त महाराष्ट्राचे पहिले मुख्यमंत्री</p>
             <h1>स्व. यशवंतराव चव्हाण <span>स्मृती भवन</span></h1>
