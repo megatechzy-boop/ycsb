@@ -19,7 +19,10 @@ define('WHATSAPP', '919763312447'); // TODO: confirm WhatsApp number with client
 define('EMAIL', 'info@example.com'); // TODO: client email for inquiries
 
 define('MAP_URL', 'https://maps.google.com/?cid=13691449001336773566');
-define('MAP_EMBED', 'https://maps.google.com/maps?q=Yashwantrao+Chavan+Smarak+Samiti+Nigdi+Pune&output=embed');
+define('MAP_EMBED', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.2783984084604!2d73.76854247501643!3d18.65149908246762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b91cbfe11e15%3A0xbe01cc53890e1bbe!2sYashwantrao%20Chavan%20Smarak!5e0!3m2!1sen!2sin!4v1792835763895!5m2!1sen!2sin');
+// Map pin coordinates (from the Google Maps embed)
+define('GEO_LAT', 18.65149908246762);
+define('GEO_LNG', 73.76854247501643);
 define('HALL_BOOKING_URL', 'https://venutaihall.com/');
 
 // Convert western digits to Marathi (Devanagari) digits

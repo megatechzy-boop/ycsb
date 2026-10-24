@@ -23,6 +23,7 @@ $page = [
             'alternateName' => SITE_NAME_MR,
             'description' => 'Memorial building of 1.5 lakh sq ft on 44 gunthe land at Pradhikaran, Nigdi, built 2014–2026 by Yashwantrao Chavan Smarak Samiti.',
             'hasMap' => MAP_URL,
+            'geo' => ['@type' => 'GeoCoordinates', 'latitude' => GEO_LAT, 'longitude' => GEO_LNG],
             'image' => SITE_URL . '/assets/images/building.webp',
             'address' => ['@type' => 'PostalAddress', 'streetAddress' => ADDRESS_STREET, 'addressLocality' => ADDRESS_CITY, 'postalCode' => ADDRESS_PIN, 'addressCountry' => 'IN'],
         ],
@@ -124,7 +125,7 @@ require __DIR__ . '/includes/page-hero.php';
             </div>
         </div>
         <div class="map">
-            <iframe src="<?= MAP_EMBED ?>" title="स्मृती भवन नकाशा" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="<?= MAP_EMBED ?>" title="स्मृती भवन नकाशा" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 </section>

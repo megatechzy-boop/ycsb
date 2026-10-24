@@ -49,6 +49,7 @@ $page = [
             'alternateName' => SITE_NAME_MR,
             'description' => 'Memorial of Yashwantrao Chavan, first Chief Minister of Maharashtra, with a 15 ft statue, UPSC/MPSC library, student hostel (144 students), 1200-seat hall and life-story gallery. Built 2014–2026, 1.5 lakh sq ft.',
             'hasMap' => MAP_URL,
+            'geo' => ['@type' => 'GeoCoordinates', 'latitude' => GEO_LAT, 'longitude' => GEO_LNG],
             'image' => SITE_URL . '/assets/images/building.webp',
             'address' => ['@type' => 'PostalAddress', 'streetAddress' => ADDRESS_STREET, 'addressLocality' => ADDRESS_CITY, 'postalCode' => ADDRESS_PIN, 'addressCountry' => 'IN'],
             'telephone' => '+91' . PHONE_1,
@@ -327,7 +328,7 @@ require __DIR__ . '/includes/header.php';
                 <li>श्री. विलास भोसले - <a href="tel:+91<?= PHONE_3 ?>"><?= mr_num(PHONE_3) ?></a></li>
             </ul>
             <div class="map">
-                <iframe src="<?= MAP_EMBED ?>" title="स्मृती भवन नकाशा" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="<?= MAP_EMBED ?>" title="स्मृती भवन नकाशा" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
         <?php require __DIR__ . '/includes/inquiry-form.php'; ?>

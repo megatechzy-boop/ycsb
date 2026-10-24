@@ -80,7 +80,7 @@ require __DIR__ . '/includes/page-hero.php';
             <h2>स्मृती भवनला कसे पोहोचाल?</h2>
             <p>संत तुकाराम उद्यानाशेजारी, सेक्टर २७ अ, निगडी प्राधिकरण, पिंपरी-चिंचवड.</p>
             <div class="map map-tall">
-                <iframe src="<?= MAP_EMBED ?>" title="स्मृती भवन नकाशा" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="<?= MAP_EMBED ?>" title="स्मृती भवन नकाशा" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
         <?php require __DIR__ . '/includes/inquiry-form.php'; ?>
