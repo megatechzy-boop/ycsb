@@ -13,7 +13,7 @@ $f = [
     'h1' => 'Student Hostel',
     'eyebrow' => '52 rooms · 144 students',
     'subtitle' => 'Safe accommodation for students who come to Pimpri-Chinchwad to study.',
-    'description' => 'Student hostel at Pradhikaran, Nigdi, Pimpri-Chinchwad – 52 rooms for 144 male and female students, with a UPSC/MPSC study library in the same building. Enquire about admission.',
+    'description' => 'Student hostel at Nigdi Pradhikaran, Pimpri-Chinchwad – 52 rooms for 144 male and female students, with a UPSC/MPSC library in the same building.',
     'image' => 'hostel',
     'intro' => [
         'The Smruti Bhavan has a student hostel so that students from rural areas who come to Pimpri-Chinchwad to study get safe and affordable accommodation.',

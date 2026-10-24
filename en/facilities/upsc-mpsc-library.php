@@ -6,11 +6,11 @@ $f = [
     'slug' => 'upsc-mpsc-library',
     'interest' => 'library',
     'schemaType' => 'Library',
-    'title' => 'UPSC MPSC Study Library in Nigdi, Pimpri-Chinchwad | Arun Kirloskar Library',
+    'title' => 'UPSC MPSC Study Library, Nigdi Pimpri-Chinchwad',
     'h1' => 'Late Arun Kirloskar UPSC & MPSC Study Library',
     'eyebrow' => 'UPSC & MPSC Library',
     'subtitle' => 'A quiet, well-equipped study room for students preparing for UPSC, MPSC and other competitive exams.',
-    'description' => 'Late Arun Kirloskar UPSC & MPSC study library at Pradhikaran, Nigdi – individual study desks, reference books and a quiet atmosphere, with a hostel in the same building.',
+    'description' => 'Late Arun Kirloskar UPSC & MPSC study library at Nigdi Pradhikaran – individual desks, reference books and a hostel in the same building.',
     'image' => 'library-board',
     'intro' => [
         'The Smruti Bhavan has a well-equipped study room and library with individual desks for students preparing for competitive exams.',

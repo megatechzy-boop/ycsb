@@ -6,11 +6,11 @@ $f = [
     'slug' => 'vadhu-var-suchak-kendra',
     'interest' => 'vadhu-var',
     'schemaType' => 'LocalBusiness',
-    'title' => 'Matrimonial Centre in Pune, Pimpri-Chinchwad | Paschim Maharashtra Vadhu-Var Suchak Kendra',
+    'title' => 'Matrimonial Centre, Pimpri-Chinchwad | Vadhu-Var Kendra',
     'h1' => 'Paschim Maharashtra Vadhu-Var Suchak Kendra',
     'eyebrow' => 'Matrimonial centre',
     'subtitle' => 'A trusted matchmaking centre for brides and grooms of all castes and religions.',
-    'description' => 'Paschim Maharashtra Vadhu-Var Suchak Kendra at Pradhikaran, Nigdi – registration for brides and grooms of all communities. Ask about the registration process.',
+    'description' => 'Paschim Maharashtra Vadhu-Var Suchak Kendra at Pradhikaran, Nigdi – registration for brides and grooms of all communities.',
     'image' => 'vadhu-var',
     'intro' => [
         'The Paschim Maharashtra Vadhu-Var Suchak Kendra helps brides and grooms of all castes and religions find a suitable match.',

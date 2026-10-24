@@ -1,7 +1,15 @@
 <?php
-// Site-wide settings. Update SITE_URL and email before going live.
+// Site-wide settings.
 
-define('SITE_URL', 'https://www.example.com'); // TODO: final domain
+// Server-specific overrides (SITE_URL, EMAIL...) go in includes/config.local.php, which is not in git
+if (is_file(__DIR__ . '/config.local.php')) {
+    require_once __DIR__ . '/config.local.php';
+}
+// Without an override, use the domain the site is served from
+if (!defined('SITE_URL')) {
+    $host = preg_replace('/[^a-z0-9.:-]/i', '', $_SERVER['HTTP_HOST'] ?? 'www.example.com');
+    define('SITE_URL', 'https://' . $host);
+}
 define('SITE_NAME_MR', 'स्व. यशवंतराव चव्हाण स्मृती भवन');
 define('SITE_NAME_EN', 'Late Yashwantrao Chavan Smruti Bhavan');
 define('ORG_NAME_MR', 'यशवंतराव चव्हाण स्मारक समिती, पिंपरी-चिंचवड');
@@ -16,7 +24,9 @@ define('PHONE_1', '9763312447'); // श्री. सुनिल जाधव
 define('PHONE_2', '9665501501'); // श्री. रामभाऊ तावरे
 define('PHONE_3', '9860490867'); // श्री. विलास भोसले
 define('WHATSAPP', '919763312447'); // TODO: confirm WhatsApp number with client
-define('EMAIL', 'info@example.com'); // TODO: client email for inquiries
+if (!defined('EMAIL')) {
+    define('EMAIL', 'info@example.com'); // TODO: client email for inquiries
+}
 
 define('MAP_URL', 'https://maps.google.com/?cid=13691449001336773566');
 define('MAP_EMBED', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.2783984084604!2d73.76854247501643!3d18.65149908246762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b91cbfe11e15%3A0xbe01cc53890e1bbe!2sYashwantrao%20Chavan%20Smarak!5e0!3m2!1sen!2sin!4v1792835763895!5m2!1sen!2sin');

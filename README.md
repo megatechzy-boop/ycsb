@@ -8,7 +8,8 @@ PHP website (HTML, CSS, vanilla JS front end; PHP back end) for Yashwantrao Chav
 - `inquiry.php` – inquiry form handler
 - `assets/` – css, js, images
 - `.htaccess` – clean URLs, caching
-- `robots.txt`, `sitemap.xml`, `llms.txt`
+- `sitemap.php`, `robots.php`, `llms.php` – served as /sitemap.xml, /robots.txt, /llms.txt (page list in `includes/pages.php`)
+- `.cpanel.yml` + `DEPLOY.md` – cPanel deployment
 
 ## Run locally
 ```
@@ -16,6 +17,6 @@ php -S localhost:8000
 ```
 
 ## Before going live
-- Set `SITE_URL`, `EMAIL`, `WHATSAPP` in `includes/config.php`
-- Replace `example.com` in `robots.txt`, `sitemap.xml`, `llms.txt`
+- Create `includes/config.local.php` on the server (see DEPLOY.md)
+- Confirm `WHATSAPP` number in `includes/config.php`
 - Replace brochure-cropped images in `assets/images/` with the professional photo shoot

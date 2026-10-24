@@ -19,7 +19,7 @@ $tributes = [
 $page = [
     'lang' => 'en',
     'title' => 'Yashwantrao Chavan Smarak Samiti, Pimpri-Chinchwad | About Us',
-    'description' => 'Yashwantrao Chavan Smarak Samiti, Pimpri-Chinchwad – working since 1989. Aims, office bearers, partner associations and the building of the Yashwantrao Chavan Smruti Bhavan at Nigdi.',
+    'description' => 'Yashwantrao Chavan Smarak Samiti, Pimpri-Chinchwad – working since 1989. Our story, aims, office bearers and partner associations.',
     'path' => '/en/about-samiti',
     'alternates' => ['mr' => '/about-samiti', 'en' => '/en/about-samiti'],
     'active' => 'about',

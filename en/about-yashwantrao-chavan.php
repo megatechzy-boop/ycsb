@@ -46,8 +46,8 @@ $faqs = [
 
 $page = [
     'lang' => 'en',
-    'title' => 'Yashwantrao Chavan Biography – Architect of Maharashtra | Life and Work',
-    'description' => 'Yashwantrao Chavan (1913–1984) – first Chief Minister of Maharashtra and Deputy Prime Minister of India. Birth, freedom struggle, cooperative movement, Panchayati Raj and his role in building Maharashtra.',
+    'title' => 'Yashwantrao Chavan Biography | Architect of Maharashtra',
+    'description' => 'Yashwantrao Chavan (1913–1984): first Chief Minister of Maharashtra and Deputy Prime Minister of India. His life, freedom struggle and work.',
     'path' => '/en/about-yashwantrao-chavan',
     'alternates' => ['mr' => '/about-yashwantrao-chavan', 'en' => '/en/about-yashwantrao-chavan'],
     'active' => 'about',
@@ -57,6 +57,7 @@ $page = [
             '@type' => 'Person',
             'name' => 'Yashwantrao Chavan',
             'alternateName' => 'यशवंतराव चव्हाण',
+            'sameAs' => ['https://en.wikipedia.org/wiki/Yashwantrao_Chavan'],
             'birthDate' => '1913-03-12',
             'birthPlace' => 'Devrashtre, Maharashtra',
             'deathDate' => '1984-11-25',

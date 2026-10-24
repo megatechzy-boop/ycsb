@@ -62,6 +62,7 @@ $page = [
             '@type' => 'Person',
             'name' => 'Yashwantrao Chavan',
             'alternateName' => 'यशवंतराव चव्हाण',
+            'sameAs' => ['https://en.wikipedia.org/wiki/Yashwantrao_Chavan'],
             'birthDate' => '1913-03-12',
             'birthPlace' => 'Devrashtre, Maharashtra',
             'deathDate' => '1984-11-25',

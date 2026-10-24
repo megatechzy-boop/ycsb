@@ -4,12 +4,22 @@ require_once __DIR__ . '/../includes/data.php';
 
 $page = [
     'lang' => 'en',
-    'title' => 'Yashwantrao Chavan Smruti Bhavan Project, Nigdi | History and Facilities',
+    'title' => 'Smruti Bhavan Project, Nigdi | History & Facilities',
     'description' => 'The Yashwantrao Chavan Smruti Bhavan – 1.5 lakh sq ft of construction on 44 gunthe at Pradhikaran, Nigdi. The journey from 1989 to 2026, facilities and location.',
     'path' => '/en/smruti-bhavan-project',
     'alternates' => ['mr' => '/smruti-bhavan-project', 'en' => '/en/smruti-bhavan-project'],
     'active' => 'about',
     'breadcrumb' => ['About' => '/en/about-samiti', 'Smruti Bhavan Project' => '/en/smruti-bhavan-project'],
+    'schema' => [[
+        '@type' => ['TouristAttraction', 'Place'],
+        '@id' => SITE_URL . '/#smruti-bhavan',
+        'name' => SITE_NAME_EN,
+        'description' => 'Memorial building of 1.5 lakh sq ft on 44 gunthe land at Pradhikaran, Nigdi, built 2014–2026 by Yashwantrao Chavan Smarak Samiti.',
+        'hasMap' => MAP_URL,
+        'geo' => ['@type' => 'GeoCoordinates', 'latitude' => GEO_LAT, 'longitude' => GEO_LNG],
+        'image' => SITE_URL . '/assets/images/building.webp',
+        'address' => ['@type' => 'PostalAddress', 'streetAddress' => ADDRESS_STREET, 'addressLocality' => ADDRESS_CITY, 'postalCode' => ADDRESS_PIN, 'addressCountry' => 'IN'],
+    ]],
 ];
 
 $hero = [

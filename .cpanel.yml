@@ -1,0 +1,14 @@
+---
+# cPanel Git Version Control deployment
+# cPanel runs these tasks when you click "Deploy HEAD Commit" (Git Version Control > Manage > Pull or Deploy).
+# 1. Replace CPANEL_USER with your cPanel username.
+# 2. For an addon domain or subdomain, change public_html/ to that domain's document root.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/CPANEL_USER/public_html/
+    - /bin/mkdir -p $DEPLOYPATH
+    # Copy the site; keep files that live only on the server (config.local.php)
+    - /bin/rsync -a --exclude='.git' --exclude='.gitignore' --exclude='.cpanel.yml' --exclude='README.md' --exclude='DEPLOY.md' --exclude='includes/config.local.php' ./ $DEPLOYPATH
+    # Safe permissions: folders 755, files 644
+    - /bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} +
+    - /bin/find $DEPLOYPATH -type f -exec /bin/chmod 644 {} +

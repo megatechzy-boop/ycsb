@@ -3,7 +3,18 @@
 require_once __DIR__ . '/config.php';
 
 $canonical = SITE_URL . $page['path'];
-$ogImage = SITE_URL . '/assets/images/building.webp';
+// Share image: the page banner photo, else the building
+$ogImage = SITE_URL . '/assets/images/' . ($hero['image'] ?? $page['ogImage'] ?? 'building') . '.webp';
+
+// Add width/height to local images that lack them, so the layout does not jump while loading (CLS)
+ob_start(function ($html) {
+    return preg_replace_callback('#<img src="(/assets/images/[\w.-]+)"(?![^>]*\bwidth=)#', function ($m) {
+        static $sizes = [];
+        $file = dirname(__DIR__) . $m[1];
+        $sizes[$file] ??= is_file($file) ? getimagesize($file) : false;
+        return $sizes[$file] ? sprintf('%s width="%d" height="%d"', $m[0], $sizes[$file][0], $sizes[$file][1]) : $m[0];
+    }, $html);
+});
 
 $orgSchema = [
     '@type' => ['NGO', 'Organization'],
@@ -21,6 +32,10 @@ $orgSchema = [
         'postalCode' => ADDRESS_PIN,
         'addressCountry' => 'IN',
     ],
+    'image' => SITE_URL . '/assets/images/building.webp',
+    'logo' => SITE_URL . '/assets/images/icon-512.png',
+    'email' => EMAIL,
+    'areaServed' => 'Pimpri-Chinchwad, Pune, Maharashtra',
     'sameAs' => [MAP_URL, HALL_BOOKING_URL],
 ];
 
@@ -103,7 +118,7 @@ $orgName = $isEn ? ORG_NAME_EN : ORG_NAME_MR;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= e($page['title']) ?></title>
     <meta name="description" content="<?= e($page['description']) ?>">
-    <?php if ($page['path'] === '/404'): ?><meta name="robots" content="noindex"><?php endif; ?>
+    <?php if ($page['path'] === '/404' || !empty($page['noindex'])): ?><meta name="robots" content="noindex, follow"><?php endif; ?>
     <link rel="canonical" href="<?= e($canonical) ?>">
     <?php // Only pages that exist in both languages declare $page['alternates'] = ['mr' => path, 'en' => path] ?>
     <?php foreach ($page['alternates'] ?? [] as $hl => $altPath): ?>
@@ -113,6 +128,10 @@ $orgName = $isEn ? ORG_NAME_EN : ORG_NAME_MR;
         <link rel="alternate" hreflang="x-default" href="<?= e(SITE_URL . $page['alternates']['mr']) ?>">
     <?php endif; ?>
     <meta name="theme-color" content="#8B1E2D">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/images/icon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/assets/images/icon-180.png">
+    <meta property="og:site_name" content="<?= e($siteName) ?>">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="<?= $isEn ? 'en_IN' : 'mr_IN' ?>">
