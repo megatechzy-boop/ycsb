@@ -1,6 +1,8 @@
 // Yashwantrao Chavan Smruti Bhavan - site interactions
 (function () {
-    const toMarathi = (n) => String(n).replace(/\d/g, (d) => '०१२३४५६७८९'[d]);
+    // Counters use Marathi digits on Marathi pages, western digits on English pages
+    const isEn = document.documentElement.lang === 'en';
+    const toMarathi = (n) => isEn ? Number(n).toLocaleString('en-IN') : String(n).replace(/\d/g, (d) => '०१२३४५६७८९'[d]);
 
     // Mobile menu
     const toggle = document.querySelector('.nav-toggle');
