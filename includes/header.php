@@ -90,8 +90,8 @@ $menu = [
             </span>
         </a>
         <div class="header-actions">
-            <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-outline btn-sm">📞 कॉल करा</a>
-            <a href="https://wa.me/<?= WHATSAPP ?>" class="btn btn-primary btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-outline btn-sm"><?= icon('phone') ?> कॉल करा</a>
+            <a href="https://wa.me/<?= WHATSAPP ?>" class="btn btn-primary btn-sm" target="_blank" rel="noopener"><?= icon('chat') ?> WhatsApp</a>
             <a href="/en/" class="lang-switch" hreflang="en" lang="en">EN</a>
         </div>
         <button class="nav-toggle" aria-label="मेनू उघडा" aria-expanded="false" aria-controls="main-nav">

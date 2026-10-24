@@ -50,9 +50,9 @@
 </footer>
 
 <div class="mobile-bar" aria-label="त्वरित संपर्क">
-    <a href="tel:+91<?= PHONE_1 ?>">📞<span>कॉल</span></a>
-    <a href="https://wa.me/<?= WHATSAPP ?>" target="_blank" rel="noopener">💬<span>WhatsApp</span></a>
-    <a href="<?= MAP_URL ?>" target="_blank" rel="noopener">📍<span>दिशा</span></a>
+    <a href="tel:+91<?= PHONE_1 ?>"><?= icon('phone') ?><span>कॉल</span></a>
+    <a href="https://wa.me/<?= WHATSAPP ?>" target="_blank" rel="noopener"><?= icon('chat') ?><span>WhatsApp</span></a>
+    <a href="<?= MAP_URL ?>" target="_blank" rel="noopener"><?= icon('pin') ?><span>दिशा</span></a>
 </div>
 
 <div class="lightbox" hidden>

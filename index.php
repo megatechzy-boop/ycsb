@@ -333,8 +333,8 @@ require __DIR__ . '/includes/header.php';
             <p>महाराष्ट्राच्या शिल्पकाराचा जीवनपट, १५ फूट पुतळा व इतिहासाचे ग्रंथालय पाहण्यासाठी कुटुंबासह अवश्य या. भेटीच्या वेळेसाठी कृपया संपर्क करा.</p>
         </div>
         <div class="btn-row">
-            <a href="<?= MAP_URL ?>" class="btn btn-gold" target="_blank" rel="noopener">📍 दिशा पहा</a>
-            <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-light">📞 <?= mr_num(PHONE_1) ?></a>
+            <a href="<?= MAP_URL ?>" class="btn btn-gold" target="_blank" rel="noopener"><?= icon('pin') ?> दिशा पहा</a>
+            <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-light"><?= icon('phone') ?> <?= mr_num(PHONE_1) ?></a>
         </div>
     </div>
 </section>
