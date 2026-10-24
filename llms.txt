@@ -36,3 +36,6 @@
 - [Halls](https://www.example.com/halls)
 - [Gallery](https://www.example.com/gallery)
 - [Contact](https://www.example.com/contact)
+- [FAQ](https://www.example.com/faq)
+- [News and events](https://www.example.com/news-events)
+- [English home page](https://www.example.com/en/)

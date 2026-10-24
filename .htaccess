@@ -1,5 +1,6 @@
 # Clean URLs: /about-samiti -> about-samiti.php
 Options -Indexes
+ErrorDocument 404 /404.php
 RewriteEngine On
 
 # Force HTTPS (enable on live server)

@@ -385,6 +385,27 @@ address { font-style: normal; }
 .gallery-item-cutout img { max-height: 420px; width: auto; margin-inline: auto; object-fit: contain; }
 .masonry-item figcaption { padding: 10px 14px 12px; font-size: .92rem; color: var(--muted); }
 
+/* FAQ / news / legal / 404 */
+.faq-jump { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px; }
+.faq-jump a { padding: 6px 16px; border-radius: 999px; background: var(--white); border: 1px solid #ecd2c8; text-decoration: none; font-weight: 600; font-size: .95rem; }
+.faq-jump a:hover { background: var(--maroon); color: var(--white); }
+.faq-group { margin-bottom: 40px; scroll-margin-top: 140px; }
+.faq-group h2 { font-size: 1.5rem; }
+.faq details p a { font-weight: 600; white-space: nowrap; }
+.event-date { display: inline-block; font-family: var(--font-head); font-size: 1.3rem; color: var(--white); background: var(--maroon); padding: 4px 14px; border-radius: 8px; margin-bottom: 12px; }
+.empty-state { text-align: center; background: var(--white); border-radius: var(--radius); padding: 40px 24px; box-shadow: var(--shadow); }
+.empty-state p { color: var(--muted); max-width: 520px; margin-inline: auto; }
+.news-list { display: grid; gap: 20px; }
+.news-item { display: grid; grid-template-columns: 220px 1fr; gap: 20px; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.news-item img { width: 100%; height: 100%; object-fit: cover; }
+.news-item > div { padding: 18px 18px 18px 0; }
+.news-item time { color: var(--brown); font-size: .9rem; font-weight: 600; }
+.legal h2 { font-size: 1.35rem; margin-top: 28px; }
+.legal-updated { text-align: left; margin-top: 0; }
+.not-found { text-align: center; }
+.not-found-code { font-family: var(--font-head); font-size: clamp(5rem, 15vw, 8rem); color: var(--gold); line-height: 1; margin: 0; }
+.not-found .btn-row { justify-content: center; }
+
 /* Contact page */
 .contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .contact-card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); border-top: 4px solid var(--maroon); display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
@@ -500,6 +521,8 @@ address { font-style: normal; }
     .photo-row { grid-template-columns: 1fr 1fr; }
     .photo-row .gallery-item:first-child:nth-last-child(odd) { grid-column: span 2; }
     .tribute-card { grid-template-columns: 1fr; }
+    .news-item { grid-template-columns: 1fr; }
+    .news-item > div { padding: 0 18px 18px; }
     .tribute-card img { height: 200px; }
     .tribute-card > div { padding: 0 20px 20px; }
     .bio-portrait { width: 110px; margin-right: 16px; }

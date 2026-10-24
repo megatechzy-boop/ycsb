@@ -65,22 +65,42 @@ $menu = [
     'gallery' => ['गॅलरी', '/gallery'],
     'contact' => ['संपर्क', '/contact'],
 ];
+
+// English pages set $page['lang'] = 'en'; they get an English menu that points into the English page
+$isEn = ($page['lang'] ?? 'mr') === 'en';
+if ($isEn) {
+    $menu = [
+        'home' => ['Home', '/en/'],
+        'about' => ['About', '/en/#about'],
+        'facilities' => ['Facilities', '/en/#facilities'],
+        'hall' => ['Halls', '/en/#halls'],
+        'hostel' => ['Students', '/en/#students'],
+        'contact' => ['Contact', '/en/#contact'],
+    ];
+}
+$siteName = $isEn ? SITE_NAME_EN : SITE_NAME_MR;
+$orgName = $isEn ? ORG_NAME_EN : ORG_NAME_MR;
 ?>
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="<?= $isEn ? 'en' : 'mr' ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= e($page['title']) ?></title>
     <meta name="description" content="<?= e($page['description']) ?>">
+    <?php if ($page['path'] === '/404'): ?><meta name="robots" content="noindex"><?php endif; ?>
     <link rel="canonical" href="<?= e($canonical) ?>">
-    <link rel="alternate" hreflang="mr" href="<?= e($canonical) ?>">
-    <link rel="alternate" hreflang="en" href="<?= e(SITE_URL . '/en' . $page['path']) ?>">
-    <link rel="alternate" hreflang="x-default" href="<?= e($canonical) ?>">
+    <?php // Only pages that exist in both languages declare $page['alternates'] = ['mr' => path, 'en' => path] ?>
+    <?php foreach ($page['alternates'] ?? [] as $hl => $altPath): ?>
+        <link rel="alternate" hreflang="<?= $hl ?>" href="<?= e(SITE_URL . $altPath) ?>">
+    <?php endforeach; ?>
+    <?php if (!empty($page['alternates']['mr'])): ?>
+        <link rel="alternate" hreflang="x-default" href="<?= e(SITE_URL . $page['alternates']['mr']) ?>">
+    <?php endif; ?>
     <meta name="theme-color" content="#8B1E2D">
 
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="mr_IN">
+    <meta property="og:locale" content="<?= $isEn ? 'en_IN' : 'mr_IN' ?>">
     <meta property="og:title" content="<?= e($page['title']) ?>">
     <meta property="og:description" content="<?= e($page['description']) ?>">
     <meta property="og:url" content="<?= e($canonical) ?>">
@@ -98,24 +118,28 @@ $menu = [
 
 <header class="site-header">
     <div class="container brand-row">
-        <a href="/" class="brand" aria-label="<?= e(SITE_NAME_MR) ?> - मुखपृष्ठ">
-            <img src="/assets/images/chavan-portrait.webp" alt="स्व. यशवंतराव चव्हाण" width="56" height="56">
+        <a href="<?= $isEn ? '/en/' : '/' ?>" class="brand" aria-label="<?= e($siteName) ?> - <?= $isEn ? 'Home' : 'मुखपृष्ठ' ?>">
+            <img src="/assets/images/chavan-portrait.webp" alt="<?= $isEn ? 'Yashwantrao Chavan' : 'स्व. यशवंतराव चव्हाण' ?>" width="56" height="56">
             <span>
-                <strong><?= e(SITE_NAME_MR) ?></strong>
-                <small><?= e(ORG_NAME_MR) ?></small>
+                <strong><?= e($siteName) ?></strong>
+                <small><?= e($orgName) ?></small>
             </span>
         </a>
         <div class="header-actions">
-            <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-outline btn-sm"><?= icon('phone') ?> कॉल करा</a>
+            <a href="tel:+91<?= PHONE_1 ?>" class="btn btn-outline btn-sm"><?= icon('phone') ?> <?= $isEn ? 'Call' : 'कॉल करा' ?></a>
             <a href="https://wa.me/<?= WHATSAPP ?>" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener"><?= icon('whatsapp') ?> WhatsApp</a>
-            <a href="/en/" class="lang-switch" hreflang="en" lang="en">EN</a>
+            <?php if ($isEn): ?>
+                <a href="/" class="lang-switch" hreflang="mr" lang="mr">मराठी</a>
+            <?php else: ?>
+                <a href="/en/" class="lang-switch" hreflang="en" lang="en">EN</a>
+            <?php endif; ?>
         </div>
-        <button class="nav-toggle" aria-label="मेनू उघडा" aria-expanded="false" aria-controls="main-nav">
+        <button class="nav-toggle" aria-label="<?= $isEn ? 'Open menu' : 'मेनू उघडा' ?>" aria-expanded="false" aria-controls="main-nav">
             <span></span><span></span><span></span>
         </button>
     </div>
 
-    <nav class="main-nav" id="main-nav" aria-label="मुख्य मेनू">
+    <nav class="main-nav" id="main-nav" aria-label="<?= $isEn ? 'Main menu' : 'मुख्य मेनू' ?>">
         <ul class="container">
             <?php foreach ($menu as $key => $item): ?>
                 <?php $isActive = ($page['active'] ?? '') === $key ? ' active' : ''; ?>
@@ -135,7 +159,7 @@ $menu = [
                     </li>
                 <?php endif; ?>
             <?php endforeach; ?>
-            <li class="nav-mobile-only"><a href="/en/" lang="en">English</a></li>
+            <li class="nav-mobile-only"><?= $isEn ? '<a href="/" lang="mr">मराठी</a>' : '<a href="/en/" lang="en">English</a>' ?></li>
         </ul>
     </nav>
 </header>

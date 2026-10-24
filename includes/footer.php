@@ -1,6 +1,45 @@
 </main>
 
 <footer class="site-footer">
+<?php if (!empty($isEn)): ?>
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <img src="/assets/images/chavan-portrait.webp" alt="" width="72" height="72" loading="lazy">
+            <h3><?= e(ORG_NAME_EN) ?></h3>
+            <p><?= e(ADDRESS_STREET) ?>, <?= e(ADDRESS_CITY) ?> <?= e(ADDRESS_PIN) ?></p>
+            <p>
+                <a href="tel:+91<?= PHONE_1 ?>">+91 <?= PHONE_1 ?></a> /
+                <a href="tel:+91<?= PHONE_2 ?>">+91 <?= PHONE_2 ?></a> /
+                <a href="tel:+91<?= PHONE_3 ?>">+91 <?= PHONE_3 ?></a>
+            </p>
+        </div>
+        <div>
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="/en/#about">About</a></li>
+                <li><a href="/en/#facilities">Facilities</a></li>
+                <li><a href="/en/#halls">Halls</a></li>
+                <li><a href="/en/#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>In Marathi</h4>
+            <ul>
+                <li><a href="/" lang="mr">मुखपृष्ठ</a></li>
+                <li><a href="/about-yashwantrao-chavan" lang="mr">स्व. यशवंतराव चव्हाण</a></li>
+                <li><a href="/gallery" lang="mr">गॅलरी</a></li>
+                <li><a href="/faq" lang="mr">प्रश्नोत्तरे</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Booking</h4>
+            <ul>
+                <li><a href="<?= HALL_BOOKING_URL ?>" target="_blank" rel="noopener">venutaihall.com ↗</a></li>
+                <li><a href="<?= MAP_URL ?>" target="_blank" rel="noopener">Google Maps ↗</a></li>
+            </ul>
+        </div>
+    </div>
+<?php else: ?>
     <div class="container footer-grid">
         <div class="footer-about">
             <img src="/assets/images/chavan-portrait.webp" alt="" width="72" height="72" loading="lazy">
@@ -41,18 +80,23 @@
             </ul>
         </div>
     </div>
+<?php endif; ?>
     <div class="footer-bottom">
         <div class="container">
-            © <?= mr_num(date('Y')) ?> <?= e(ORG_NAME_MR) ?>. सर्व हक्क राखीव.
+            <?php if (!empty($isEn)): ?>
+                © <?= date('Y') ?> <?= e(ORG_NAME_EN) ?>. All rights reserved.
+            <?php else: ?>
+                © <?= mr_num(date('Y')) ?> <?= e(ORG_NAME_MR) ?>. सर्व हक्क राखीव.
+            <?php endif; ?>
             <span>Website by Mega Techzy</span>
         </div>
     </div>
 </footer>
 
 <div class="mobile-bar" aria-label="त्वरित संपर्क">
-    <a href="tel:+91<?= PHONE_1 ?>"><?= icon('phone') ?><span>कॉल</span></a>
+    <a href="tel:+91<?= PHONE_1 ?>"><?= icon('phone') ?><span><?= !empty($isEn) ? 'Call' : 'कॉल' ?></span></a>
     <a href="https://wa.me/<?= WHATSAPP ?>" target="_blank" rel="noopener"><?= icon('whatsapp') ?><span>WhatsApp</span></a>
-    <a href="<?= MAP_URL ?>" target="_blank" rel="noopener"><?= icon('pin') ?><span>दिशा</span></a>
+    <a href="<?= MAP_URL ?>" target="_blank" rel="noopener"><?= icon('pin') ?><span><?= !empty($isEn) ? 'Directions' : 'दिशा' ?></span></a>
 </div>
 
 <div class="lightbox" hidden>
