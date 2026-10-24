@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/config.php';
 
 $facilities = [
-    ['statue', 'स्व. यशवंतराव चव्हाण यांचा पूर्णाकृती पुतळा', 'भारतातील सर्वांत उंच (१५ फूट) पुतळा.', '/facilities/statue'],
+    ['statue-3d', 'स्व. यशवंतराव चव्हाण यांचा पूर्णाकृती पुतळा', 'भारतातील सर्वांत उंच (१५ फूट) पुतळा.', '/facilities/statue'],
     ['library-board', 'स्पर्धा परीक्षा अभ्यासिका व ग्रंथालय', 'स्व. अरुण किर्लोस्कर अभ्यासिका - UPSC / MPSC विद्यार्थ्यांसाठी.', '/facilities/upsc-mpsc-library'],
     ['history-library', 'इतिहासाचे ग्रंथालय व वाचनालय', 'स्व. श्रीमंत छ. अभयसिंहराजे भोसले इतिहास ग्रंथालय.', '/facilities/history-library'],
     ['guidance', 'विद्यार्थी मार्गदर्शन केंद्र', 'स्व. हिराबाई किसनराव लांडगे केंद्र - शैक्षणिक व सर्वांगीण विकासासाठी.', '/facilities/student-guidance-centre'],
@@ -172,7 +172,7 @@ require __DIR__ . '/includes/header.php';
             <?php foreach ($facilities as [$img, $title, $text, $link]): ?>
                 <?php $external = str_starts_with($link, 'http'); ?>
                 <a class="card" href="<?= e($link) ?>"<?= $external ? ' target="_blank" rel="noopener"' : '' ?>>
-                    <div class="card-img"><img src="/assets/images/<?= $img ?>.webp" alt="<?= e($title) ?>" loading="lazy"></div>
+                    <div class="card-img<?= $img === 'statue-3d' ? ' card-img-cutout' : '' ?>"><img src="/assets/images/<?= $img ?>.webp" alt="<?= e($title) ?>" loading="lazy"></div>
                     <div class="card-body">
                         <h3><?= e($title) ?></h3>
                         <p><?= e($text) ?></p>
